@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Art Gallery Testing]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Admin: Login(failed)" verbose="0">
+    <classes>
+      <class name="TestCaseClasses.LoginTest">
+        <methods>
+          <include name="AdminLoginWithInValidDetails"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="AdminLoginWithValidDetails"/>
+        </methods>
+      </class> <!-- TestCaseClasses.LoginTest -->
+    </classes>
+  </test> <!-- Admin: Login(failed) -->
+</suite> <!-- Failed suite [Art Gallery Testing] -->
