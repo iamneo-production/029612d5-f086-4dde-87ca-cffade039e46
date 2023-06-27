@@ -1,4 +1,4 @@
-Test/LoginTest.class
+ObjectClasses/SetupDriver.class
 com/example/AppTest.class
-Pages/SetupDriver.class
-Pages/Login.class
+TestCaseClasses/LoginTest.class
+ObjectClasses/Login.class

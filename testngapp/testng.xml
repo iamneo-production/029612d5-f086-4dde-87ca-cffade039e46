@@ -2,7 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Art Gallery Testing">
-    <suite-files>
-        <suite-file path="testngLogin.xml" />
-    </suite-files>
+
+    <test name="Admin: Login">
+        <classes>
+            <class name="TestCaseClasses.LoginTest" />
+        </classes>
+    </test>
+
 </suite>

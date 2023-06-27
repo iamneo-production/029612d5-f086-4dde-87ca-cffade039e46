@@ -1,4 +1,4 @@
-/home/coder/project/workspace/testngapp/src/test/java/Test/LoginTest.java
-/home/coder/project/workspace/testngapp/src/test/java/Pages/SetupDriver.java
-/home/coder/project/workspace/testngapp/src/test/java/Pages/Login.java
+/home/coder/project/workspace/testngapp/src/test/java/TestCaseClasses/LoginTest.java
+/home/coder/project/workspace/testngapp/src/test/java/ObjectClasses/Login.java
+/home/coder/project/workspace/testngapp/src/test/java/ObjectClasses/SetupDriver.java
 /home/coder/project/workspace/testngapp/src/test/java/com/example/AppTest.java

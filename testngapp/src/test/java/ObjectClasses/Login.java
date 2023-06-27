@@ -1,8 +1,11 @@
-package Pages;
+package ObjectClasses;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class Login {
     WebDriver driver;
@@ -14,10 +17,15 @@ public class Login {
     }
 
     public void navigateToAdminLoginPage() {
-        WebElement navAdmin = driver.findElement(By.xpath("/html/body/div[1]/nav/div/ul/li[5]/a"));
-        navAdmin.click();
-    }
-    
+        WebDriverWait wait = new WebDriverWait(driver, 50);
+        // WebElement navAdmin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='navbarSupportedContent']/ul/li[5]/a")));
+
+        WebElement navAdmin = driver.findElement(By.xpath("//*[@id='navbarSupportedContent']/ul/li[5]/a"));
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", navAdmin);
+
+        // navAdmin.click();
+    }   
 
     public void sendUsernameKey(String username) {
         WebElement usernameInput = driver.findElement(By.xpath("/html/body/div/form/div/div[1]/input"));
@@ -39,35 +47,39 @@ public class Login {
     }
 
     public void adminLogin() {
-        navigateToAdminLoginPage();
+        // navigateToAdminLoginPage();
         sendUsernameKey(username);
         sendPasswordKey(password);
         clickLoginButton();
     }
+
 
     public void adminLogin(String username, String password) {
-        System.out.println("Up");
-        navigateToAdminLoginPage();
-        System.out.println("Down");
+        // navigateToAdminLoginPage();
         sendUsernameKey(username);
         sendPasswordKey(password);
         clickLoginButton();
     }
+
+
+
+
     public void navigateToAdminLogoutPage() {
-        // Error in xpath 
-        WebElement navAdmin = driver.findElement(By.xpath("//*[@id='container']/header/div[2]/ul/li[2]/a"));
+        WebElement navAdmin = driver.findElement(By.xpath("/html/body/section/header/div[2]/ul/li[2]/a"));
         navAdmin.click();
-        WebElement logoutTag = driver.findElement(By.xpath("//*[@id='container']/header/div[2]/ul/li[2]/ul/li[3]/a"));
-        logoutTag.click();
-
-    }
-    public void backToHomepage(){
-        WebElement backToHomepage = driver.findElement(By.xpath("/html/body/div[1]/form/div/lable/p/a"));
-        backToHomepage.click();
+    }   
+    
+    public void clickLogoutButton() {
+        WebElement logout = driver.findElement(By.xpath("//*[@id='container']/header/div[2]/ul/li[2]/ul/li[3]/a"));
+        logout.click();
     }
 
-    public void logout(){
+    public void adminLogout() {
         navigateToAdminLogoutPage();
-        backToHomepage();
+        clickLogoutButton();
+    }
+
+    public void navigateBackToHomePage() {
+        driver.get("https://artgallery.neohire.io/");
     }
 }
