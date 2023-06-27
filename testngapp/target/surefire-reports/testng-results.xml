@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-27T06:29:52 UTC" name="Art Gallery Testing" finished-at="2023-06-27T06:29:55 UTC" duration-ms="3982">
+  <suite started-at="2023-06-27T06:32:42 UTC" name="Art Gallery Testing" finished-at="2023-06-27T06:32:46 UTC" duration-ms="4012">
     <groups>
     </groups>
-    <test started-at="2023-06-27T06:29:52 UTC" name="Admin: Login" finished-at="2023-06-27T06:29:55 UTC" duration-ms="3982">
+    <test started-at="2023-06-27T06:32:42 UTC" name="Admin: Login" finished-at="2023-06-27T06:32:46 UTC" duration-ms="4012">
       <class name="TestCaseClasses.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:29:43 UTC" name="setup" finished-at="2023-06-27T06:29:52 UTC" duration-ms="8292" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:32:34 UTC" name="setup" finished-at="2023-06-27T06:32:42 UTC" duration-ms="7736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AdminLoginWithInValidDetails()[pri:0, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:29:52 UTC" name="AdminLoginWithInValidDetails" finished-at="2023-06-27T06:29:53 UTC" duration-ms="1649" status="PASS">
+        <test-method signature="AdminLoginWithInValidDetails()[pri:0, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:32:42 UTC" name="AdminLoginWithInValidDetails" finished-at="2023-06-27T06:32:44 UTC" duration-ms="1573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AdminLoginWithInValidDetails -->
-        <test-method signature="AdminLoginWithValidDetails()[pri:1, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:29:53 UTC" name="AdminLoginWithValidDetails" finished-at="2023-06-27T06:29:55 UTC" duration-ms="2296" status="PASS">
+        <test-method signature="AdminLoginWithValidDetails()[pri:1, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:32:44 UTC" name="AdminLoginWithValidDetails" finished-at="2023-06-27T06:32:46 UTC" duration-ms="2391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AdminLoginWithValidDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:29:56 UTC" name="tearDown" finished-at="2023-06-27T06:29:56 UTC" duration-ms="240" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCaseClasses.LoginTest@4b14c583]" started-at="2023-06-27T06:32:46 UTC" name="tearDown" finished-at="2023-06-27T06:32:46 UTC" duration-ms="232" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
