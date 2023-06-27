@@ -3,6 +3,9 @@ package ObjectClasses;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class Login {
     WebDriver driver;
@@ -14,8 +17,14 @@ public class Login {
     }
 
     public void navigateToAdminLoginPage() {
+        WebDriverWait wait = new WebDriverWait(driver, 50);
+        // WebElement navAdmin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='navbarSupportedContent']/ul/li[5]/a")));
+
         WebElement navAdmin = driver.findElement(By.xpath("//*[@id='navbarSupportedContent']/ul/li[5]/a"));
-        navAdmin.click();
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", navAdmin);
+
+        // navAdmin.click();
     }   
 
     public void sendUsernameKey(String username) {

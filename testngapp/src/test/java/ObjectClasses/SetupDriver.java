@@ -24,9 +24,9 @@ public class SetupDriver {
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--disable-dev-shm-usage");
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
-        // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        // driver.get("https://artgallery.neohire.io/");
-        driver.get("https://artgallery.neohire.io/admin/login.php");
+        driver.get("https://artgallery.neohire.io/");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        // driver.get("https://artgallery.neohire.io/admin/login.php");
     }
 
     @AfterSuite(alwaysRun = true)

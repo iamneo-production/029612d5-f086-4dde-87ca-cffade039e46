@@ -15,6 +15,7 @@ public class LoginTest extends SetupDriver{
         Login login = new Login(driver);
         login.adminLogin();
         String title = driver.getTitle();
+        System.out.println(title);
         
         assertEquals("Art Gallery Management System - Admin Dashboard", title);
     }
@@ -22,7 +23,9 @@ public class LoginTest extends SetupDriver{
     @Test(priority = 0)
     public void AdminLoginWithInValidDetails() {
         Login login = new Login(driver);
-        // login.navigateToAdminLoginPage();
+        login.navigateToAdminLoginPage();
+        System.out.println(driver.getTitle());
+
         login.adminLogin("abc", "xyz"); 
         Alert alert = driver.switchTo().alert();
         String alertMsg = alert.getText();
