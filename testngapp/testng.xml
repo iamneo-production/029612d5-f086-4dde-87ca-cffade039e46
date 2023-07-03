@@ -7,6 +7,11 @@
         <classes>
             <class name="TestCaseClasses.ArtistTest" />
         </classes>
+
+    <test name="Admin: Art Medium">
+        <classes>
+            <class name="TestCaseClasses.ArtMediumTest" />
+        </classes> 
     </test>
     <test name="Admin: Art Type">
         <classes>
@@ -23,5 +28,11 @@
         </classes>
     </test> 
 
+
+    <test name="Admin: Art Product">
+        <classes>
+            <class name="TestCaseClasses.ArtProductTest" />
+        </classes>
+    </test>  
 
 </suite>
