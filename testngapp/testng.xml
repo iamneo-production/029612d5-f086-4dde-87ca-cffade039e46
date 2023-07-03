@@ -3,10 +3,17 @@
 
 <suite name="Art Gallery Testing">
 
-    <test name="Admin: Login">
+
+    <test name="Admin: Art Medium">
         <classes>
-            <class name="TestCaseClasses.LoginTest" />
-        </classes>
+            <class name="TestCaseClasses.ArtMediumTest" />
+        </classes> 
     </test>
+
+    <test name="Admin: Art Product">
+        <classes>
+            <class name="TestCaseClasses.ArtProductTest" />
+        </classes>
+    </test>  
 
 </suite>
