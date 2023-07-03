@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Art Gallery Testing">
+
+    <test name="Admin: Artist">
+        <classes>
+            <class name="TestCaseClasses.ArtistTest" />
+        </classes>
+    </test>
+
+</suite>
