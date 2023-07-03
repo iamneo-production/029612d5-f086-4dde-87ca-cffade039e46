@@ -3,6 +3,11 @@
 
 <suite name="Art Gallery Testing">
 
+    <test name="Admin: Artist">
+        <classes>
+            <class name="TestCaseClasses.ArtistTest" />
+        </classes>
+    </test>
     <test name="Admin: Art Type">
         <classes>
             <class name="TestCaseClasses.ArtTypeTest" />
@@ -17,5 +22,6 @@
             <class name="TestCaseClasses.PagesTest" />
         </classes>
     </test> 
+
 
 </suite>
