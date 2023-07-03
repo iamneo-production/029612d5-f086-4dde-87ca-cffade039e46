@@ -6,6 +6,10 @@
     <test name="Admin: Art Type">
         <classes>
             <class name="TestCaseClasses.ArtTypeTest" />
+
+    <test name="Admin: Enquiry ">
+        <classes>
+            <class name="TestCaseClasses.EnquiryTest" />
         </classes>
     </test>
 
