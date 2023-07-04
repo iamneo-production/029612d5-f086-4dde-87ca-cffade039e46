@@ -22,17 +22,24 @@
             <class name="TestCaseClasses.EnquiryTest" />
         </classes>
     </test>
-    <test name="Admin: Pages">
-        <classes>
-            <class name="TestCaseClasses.PagesTest" />
-        </classes>
-    </test> 
 
+    <test name="Admin: Enquiry Search">
+        <classes>
+            <class name="TestCaseClasses.EnquirySearchTest" />
+        </classes>
+    </test>  
 
     <test name="Admin: Art Product">
         <classes>
             <class name="TestCaseClasses.ArtProductTest" />
         </classes>
     </test>  
+
+    <test name="Admin: Pages">
+        <classes>
+            <class name="TestCaseClasses.PagesTest" />
+        </classes>
+    </test> 
+
 
 </suite>

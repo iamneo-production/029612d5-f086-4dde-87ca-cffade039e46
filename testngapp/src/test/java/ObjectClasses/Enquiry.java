@@ -257,7 +257,8 @@ public class Enquiry {
     
     public void fillSearchQuery(String search) {
         WebElement fillsearch =  driver.findElement(By.xpath("//*[@id='searchdata']"));
-        sendkeys(fillsearch, search);
+        fillsearch.sendKeys(search);
+        // sendkeys(fillsearch, search);
     }
 
     public void clickSubmitButton() {
