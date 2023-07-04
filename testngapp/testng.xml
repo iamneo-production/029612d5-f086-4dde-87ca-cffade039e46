@@ -3,11 +3,16 @@
 
 <suite name="Art Gallery Testing">
 
-
     <test name="Admin: Enquiry ">
         <classes>
             <class name="TestCaseClasses.EnquiryTest" />
         </classes>
     </test>
+
+    <test name="Admin: Enquiry Search">
+        <classes>
+            <class name="TestCaseClasses.EnquirySearchTest" />
+        </classes>
+    </test>  
 
 </suite>
