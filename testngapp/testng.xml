@@ -102,7 +102,7 @@
 
     <test name="User: ViewDetails ">
         <classes>
-            <class name="TestCaseClasses.userViewDetatilsTest" />
+            <class name="TestCaseClasses.userViewDetailsTest" />
         </classes>
     </test>
     

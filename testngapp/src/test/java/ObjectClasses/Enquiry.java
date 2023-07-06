@@ -30,6 +30,11 @@ public class Enquiry {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+    public void click(WebElement element){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", element);
+    }
+
 
     //To get the Table data
     public List<List<WebElement>> getTableData() {
@@ -118,7 +123,7 @@ public class Enquiry {
     }
     
     public void fillName(String name) {
-        System.out.println(driver.findElement(By.name("fullname")).isDisplayed());
+        driver.findElement(By.name("fullname")).isDisplayed();
         driver.findElement(By.name("fullname")).sendKeys(name);
     }
 
@@ -141,9 +146,7 @@ public class Enquiry {
 
     public void addEnquiry(String name, String email, String number, String msg) {
         navigateToEnquiryPageinUser();
-        System.out.println(driver.getTitle());
         scrollBy();
-        System.out.println(driver.getTitle());
         fillName(name);
         fillEmail(email);
         fillNumber(number);
@@ -230,10 +233,6 @@ public class Enquiry {
         navigateToManageAnsweredEnquiryPage();
         scrollBy();
         clickViewDetailsButton();
-    }
-    public void click(WebElement element){
-        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("arguments[0].click();", element);
     }
 
     public void sendkeys(WebElement element, String value){

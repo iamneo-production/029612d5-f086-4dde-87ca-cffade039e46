@@ -26,11 +26,13 @@ public class SetupDriver {
         driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
         driver.get("https://artgallery.neohire.io/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        System.out.println("\n\n || TESTSUITE STARTED ||");
         // driver.get("https://artgallery.neohire.io/admin/login.php");
     }
 
     @AfterSuite(alwaysRun = true)
     public void tearDown() {
+        System.out.println("\n\n || TESTSUITE TERMINATED || \n\n");
         driver.quit();
     }
 }

@@ -15,16 +15,16 @@ public class LoginTest extends SetupDriver{
         Login login = new Login(driver);
         login.adminLogin();
         String title = driver.getTitle();
-        System.out.println(title);
         
         assertEquals("Art Gallery Management System - Admin Dashboard", title);
+        System.out.println("\n Valid Login Details Check");
     }
     
     @Test(priority = 0)
     public void AdminLoginWithInValidDetails() {
+        System.out.println("\n\n|| LOGIN ||");
         Login login = new Login(driver);
         login.navigateToAdminLoginPage();
-        System.out.println(driver.getTitle());
 
         login.adminLogin("abc", "xyz"); 
         Alert alert = driver.switchTo().alert();
@@ -33,6 +33,7 @@ public class LoginTest extends SetupDriver{
 
         // login.navigateBackToHomePage();
         assertEquals("Invalid Details", alertMsg);
+        System.out.println("\n Invalid Login Details Check");
     }
 
 }

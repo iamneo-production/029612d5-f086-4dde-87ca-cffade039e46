@@ -12,9 +12,9 @@ import org.testng.annotations.Test;
 
 import ObjectClasses.ArtMedium;
 import ObjectClasses.ArtProduct;
-// import ObjectClasses.ArtType;
-// import ObjectClasses.Artist;
-// import ObjectClasses.Enquiry;
+import ObjectClasses.ArtType;
+import ObjectClasses.Artist;
+import ObjectClasses.Enquiry;
 import ObjectClasses.SetupDriver;
 
 public class DashboardDetailsTest extends SetupDriver{
@@ -25,35 +25,35 @@ public class DashboardDetailsTest extends SetupDriver{
         System.out.println("\n\n|| ADMIN DASHBOARD ||");
     }
     
-    // @Test(priority = 0)
-    // public void artistDetails() {
-    //     // login.adminLogin();
-    //     Artist artist = new Artist(driver);
+    @Test(priority = 0)
+    public void artistDetails() {
+        // login.adminLogin();
+        Artist artist = new Artist(driver);
 
-    //     List<List<WebElement>> data = artist.dashboardDetails();
+        List<List<WebElement>> data = artist.dashboardDetails();
 
-    //     // assertEquals(3, data.size());
-    //     String title = driver.getTitle();
-    //     assertEquals("Manage Artist | Art Gallery Management System", title);
+        // assertEquals(3, data.size());
+        String title = driver.getTitle();
+        assertEquals("Manage Artist | Art Gallery Management System", title);
         
-    //     System.out.println("\nArtist Details!");
-    //     artist.printTable();
-    // }
+        System.out.println("\nArtist Details!");
+        artist.printTable();
+    }
 
-    // @Test(priority = 1)
-    // public void artTypeDetails() {
-    //     // login.adminLogin();
-    //     ArtType artType = new ArtType(driver);
+    @Test(priority = 1)
+    public void artTypeDetails() {
+        // login.adminLogin();
+        ArtType artType = new ArtType(driver);
 
-    //     List<List<WebElement>> data = artType.dashboardDetails();
+        List<List<WebElement>> data = artType.dashboardDetails();
 
-    //     // assertEquals(8, data.size());
-    //     String title = driver.getTitle();
-    //     assertEquals("Manage Art Type| Art Gallery Management System", title);
+        // assertEquals(8, data.size());
+        String title = driver.getTitle();
+        assertEquals("Manage Art Type| Art Gallery Management System", title);
         
-    //     System.out.println("\nArtType Details!");
-    //     artType.printTable();
-    // }
+        System.out.println("\nArtType Details!");
+        artType.printTable();
+    }
 
     @Test(priority = 2)
     public void artMediumDetails() {
@@ -84,33 +84,33 @@ public class DashboardDetailsTest extends SetupDriver{
         artProduct.printTable();
     }
 
-    // @Test(priority = 4)
-    // public void AnsweredEnquiryDetails() {
-    //     // login.adminLogin();
-    //     Enquiry enquiry = new Enquiry(driver);
-    //     List<List<WebElement>> data = enquiry.AnsweredEnquiryDetails();
+    @Test(priority = 4)
+    public void AnsweredEnquiryDetails() {
+        // login.adminLogin();
+        Enquiry enquiry = new Enquiry(driver);
+        List<List<WebElement>> data = enquiry.AnsweredEnquiryDetails();
 
-    //     // assertEquals(62, data.size());
-    //     String title = driver.getTitle();
-    //     assertEquals("Answer Enquiry | Art Gallery Management System", title);
+        // assertEquals(62, data.size());
+        String title = driver.getTitle();
+        assertEquals("Answer Enquiry | Art Gallery Management System", title);
         
-    //     System.out.println("\nAnswered Enquiry Details!");
-    //     enquiry.printTable();
-    // }
+        System.out.println("\nAnswered Enquiry Details!");
+        enquiry.printTable();
+    }
 
-    // @Test(priority = 5)
-    // public void UnansweredEnquiryDetails() {
-    //     // login.adminLogin();
-    //     Enquiry enquiry = new Enquiry(driver);
-    //     List<List<WebElement>> data = enquiry.UnansweredEnquiryDetails();
+    @Test(priority = 5)
+    public void UnansweredEnquiryDetails() {
+        // login.adminLogin();
+        Enquiry enquiry = new Enquiry(driver);
+        List<List<WebElement>> data = enquiry.UnansweredEnquiryDetails();
 
-    //     // assertEquals(26, data.size());
-    //     String title = driver.getTitle();
-    //     assertEquals("Unanswer Enquiry | Art Gallery Management System", title);
+        // assertEquals(26, data.size());
+        String title = driver.getTitle();
+        assertEquals("Unanswer Enquiry | Art Gallery Management System", title);
         
-    //     System.out.println("\nUnanswered Enquiry Details!");
-    //     enquiry.printTable();
-    // }
+        System.out.println("\nUnanswered Enquiry Details!");
+        enquiry.printTable();
+    }
 
     @AfterMethod
     public void driverNavigateBackward() {
