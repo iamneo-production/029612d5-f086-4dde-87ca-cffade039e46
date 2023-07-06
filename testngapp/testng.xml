@@ -3,6 +3,7 @@
 
 <suite name="Art Gallery Testing">
 
+<<<<<<< HEAD
     <test name="Admin: Artist">
         <classes>
             <class name="TestCaseClasses.ArtistTest" />
@@ -44,5 +45,61 @@
         </classes>
     </test> 
 
+=======
+    <test name="Admin: Login">
+        <classes>
+            <class name="TestCaseClasses.LoginTest" />
+        </classes>
+    </test>
+
+
+    <test name="Admin: Logout">
+        <classes>
+            <class name="TestCaseClasses.LogoutTest" />
+        </classes>
+    </test> 
+
+
+    <test name="User: NavBar ">
+        <classes>
+            <class name="TestCaseClasses.userNavbarTest" />
+        </classes>
+    </test>
+
+
+    <test name="User: Dropdown ">
+        <classes>
+            <class name="TestCaseClasses.userDropdownTest" />
+        </classes>
+    </test>
+
+
+    <test name="User: Enquiry ">
+        <classes>
+            <class name="TestCaseClasses.userEnquiryTest" />
+        </classes>
+    </test>
+
+
+    <test name="User: Links ">
+        <classes>
+            <class name="TestCaseClasses.userLinksTest" />
+        </classes>
+    </test>
+
+
+    <test name="User: ViewDetails ">
+        <classes>
+            <class name="TestCaseClasses.userViewDetailsTest" />
+        </classes>
+    </test>
+    
+
+    <test name="User: Search ">
+        <classes>
+            <class name="TestCaseClasses.userSearchTest" />
+        </classes>
+    </test>  
+>>>>>>> Art-Gallery-System-AdityaakaAD
 
 </suite>
