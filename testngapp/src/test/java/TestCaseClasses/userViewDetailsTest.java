@@ -4,7 +4,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import ObjectClasses.SetupDriver;
-import ObjectClasses.userSearch;
 import ObjectClasses.userViewDetails;
 
 public class userViewDetailsTest extends SetupDriver {

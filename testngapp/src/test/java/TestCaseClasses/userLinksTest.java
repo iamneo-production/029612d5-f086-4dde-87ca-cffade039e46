@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import ObjectClasses.SetupDriver;
 import ObjectClasses.userLinks;
-import ObjectClasses.userNavbar;
 
 public class userLinksTest extends SetupDriver{
 
