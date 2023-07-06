@@ -3,29 +3,46 @@
 
 <suite name="Art Gallery Testing">
 
-<<<<<<< HEAD
+    <test name="Admin: Login">
+        <classes>
+            <class name="TestCaseClasses.LoginTest" />
+        </classes>
+    </test>
+
+    <test name="Admin: Dashboard">
+        <classes>
+            <class name="TestCaseClasses.DashboardDetailsTest" />
+        </classes>
+    </test>  
+
+   
     <test name="Admin: Artist">
         <classes>
             <class name="TestCaseClasses.ArtistTest" />
         </classes>
-
-    <test name="Admin: Art Medium">
-        <classes>
-            <class name="TestCaseClasses.ArtMediumTest" />
-        </classes> 
     </test>
+ 
 
     <test name="Admin: Art Type">
         <classes>
             <class name="TestCaseClasses.ArtTypeTest" />
         </classes>
-    </test>  
+    </test>
  
+
+    <test name="Admin: Art Medium">
+        <classes>
+            <class name="TestCaseClasses.ArtMediumTest" />
+        </classes>
+    </test>
+
+
     <test name="Admin: Art Product">
         <classes>
             <class name="TestCaseClasses.ArtProductTest" />
         </classes>
-    </test>  
+    </test> 
+
 
     <test name="Admin: Enquiry ">
         <classes>
@@ -33,24 +50,19 @@
         </classes>
     </test>
 
+
     <test name="Admin: Enquiry Search">
         <classes>
             <class name="TestCaseClasses.EnquirySearchTest" />
         </classes>
     </test>  
 
+
     <test name="Admin: Pages">
         <classes>
             <class name="TestCaseClasses.PagesTest" />
         </classes>
     </test> 
-
-=======
-    <test name="Admin: Login">
-        <classes>
-            <class name="TestCaseClasses.LoginTest" />
-        </classes>
-    </test>
 
 
     <test name="Admin: Logout">
@@ -90,7 +102,7 @@
 
     <test name="User: ViewDetails ">
         <classes>
-            <class name="TestCaseClasses.userViewDetailsTest" />
+            <class name="TestCaseClasses.userViewDetatilsTest" />
         </classes>
     </test>
     
@@ -99,7 +111,6 @@
         <classes>
             <class name="TestCaseClasses.userSearchTest" />
         </classes>
-    </test>  
->>>>>>> Art-Gallery-System-AdityaakaAD
+    </test>   
 
 </suite>

@@ -25,8 +25,15 @@ public class ArtMedium {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
+    public void click(WebElement element){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", element);
+    }
+
+
     public void navigateToArtMediumDetails() {
-        driver.findElement(By.xpath("//*[@id='main-content']/section/div[3]/div[2]/div/div[2]/a")).click();
+        WebElement elm = driver.findElement(By.xpath("//*[@id='main-content']/section/div[3]/div[2]/div/div[2]/a"));
+        click(elm);
     } 
 
     public List<List<WebElement>> getTableData() {
