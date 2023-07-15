@@ -61,12 +61,61 @@ public class Artist {
     }
 
     public void printTable() {
-        WebElement tableBody = driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table/tbody"));
+        WebElement tableBody = driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table"));
         
         List<WebElement> rows = tableBody.findElements(By.tagName("tr"));
+        List<List<String>> table = new ArrayList<>();
+        
         for(WebElement row:rows){
             scrollToWebElement(row);
-            System.out.println(row.getText().split("Edit")[0]);
+            List<WebElement> cols = row.findElements(By.tagName("td"));
+            if(cols.size()<1){
+                cols = row.findElements(By.tagName("th"));
+            }
+            
+            List<String> data = new ArrayList<>();
+            for(int col=0;col<cols.size()-1;col++){
+                data.add(cols.get(col).getText());
+            }
+
+            table.add(data);
+        }
+        
+        int numCols = table.get(0).size();
+        
+        // Calculate the maximum width of each column
+        int[] colWidths = new int[numCols];
+        for (List<String> row : table) {
+            for (int i = 0; i < numCols; i++) {
+                int width = row.get(i).length();
+                if (width > colWidths[i]) {
+                    colWidths[i] = width;
+                }
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < colWidths.length; i++) {
+            sum += colWidths[i];
+        }
+        
+
+        // Print the table
+        for (int i=0;i<table.size();i++) {
+            for (int j = 0; j < numCols; j++) {
+                String cell = table.get(i).get(j);
+                int padding = colWidths[j] - cell.length();
+                System.out.print(cell + " ".repeat(padding + 2));
+            }
+            if(i==0){
+                System.out.println();
+                for(int k=0;k<sum;k++){
+                    System.out.print("-");;
+                }
+                System.out.println();
+            }
+            else{
+                System.out.println();
+            }
         }
     }
     
@@ -199,7 +248,7 @@ public class Artist {
     }
     
     public void updateArtist(String name, String number, String email, String education, String award, String imagePath) {
-        // navigateToManagetoArtistPage();
+        navigateToManagetoArtistPage();
         List<List<WebElement>> data = getTableData();
         
         if(data.size() > 0){
@@ -232,6 +281,7 @@ public class Artist {
     }
 
     public void deleteArtist() {
+        navigateToManagetoArtistPage();
         clickDeleteButton();
     }
 

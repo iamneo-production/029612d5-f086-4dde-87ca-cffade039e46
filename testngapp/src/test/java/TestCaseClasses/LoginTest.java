@@ -7,10 +7,16 @@ import org.testng.annotations.Test;
 
 import ObjectClasses.Login;
 import ObjectClasses.SetupDriver;
+import org.testng.annotations.BeforeClass;
+
 
 public class LoginTest extends SetupDriver{
-    
-    @Test(priority = 1)
+    @BeforeClass(alwaysRun=true)
+    public void artType() {
+        System.out.println("\n\n|| LOGIN ||");
+    }
+
+    @Test(groups = {"login"}, dependsOnMethods = {"AdminLoginWithInValidDetails"})    
     public void AdminLoginWithValidDetails() {
         Login login = new Login(driver);
         login.adminLogin();
@@ -20,9 +26,8 @@ public class LoginTest extends SetupDriver{
         System.out.println("\n Valid Login Details Check");
     }
     
-    @Test(priority = 0)
+    @Test( groups = {"login"})
     public void AdminLoginWithInValidDetails() {
-        System.out.println("\n\n|| LOGIN ||");
         Login login = new Login(driver);
         login.navigateToAdminLoginPage();
 

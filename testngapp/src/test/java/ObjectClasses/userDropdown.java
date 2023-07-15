@@ -41,8 +41,10 @@ public class userDropdown {
             driver.get(link);
 
             String headline=driver.findElement(By.xpath("/html/body/section/div/h2")).getText();
-            System.out.println("Headline: " +headline);
-
+            System.out.println("Option name: "+text);
+            System.out.println("Page title: " +headline);
+            System.out.println("\n");
+            
             driver.close();
             driver.switchTo().window(tabs.get(0));
 

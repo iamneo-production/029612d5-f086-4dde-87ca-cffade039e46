@@ -32,16 +32,19 @@ public class userSearch {
 
     List<WebElement> cards = driver.findElements(By.className("product-toys-info"));
         if (driver.getPageSource().contains("Enquiry")) {
+            System.out.println("\n");
+            System.out.println("Search input: "+searchName);
+            System.out.println("\tAvailaible products: ");
             for (WebElement card : cards) {
                 String productName = card.findElement(By.tagName("h4")).getText();
 
-                System.out.println("Search for "+searchName +" is "+productName+".");
+                System.out.println("\t "+productName);
             }
         }
 
         if(driver.getPageSource().contains("No Record Found"))
         {
-            System.out.println("No Products availaible for "+searchName+" search.");
+            System.out.println("\tNo Products availaible for "+searchName+" search.");
         }
 
     }

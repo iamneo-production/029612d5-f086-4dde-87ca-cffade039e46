@@ -16,7 +16,7 @@ public class ArtTypeTest extends SetupDriver{
         System.out.println("\n\n|| ARTTYPE ||");
     }
     
-    @Test(priority = 0)
+    @Test(priority = 9, groups = {"admin", "arttype"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void addArtTypeTest() {
 
         // login.adminLogin();
@@ -37,7 +37,7 @@ public class ArtTypeTest extends SetupDriver{
         artType.printTable();
     }
     
-    @Test(priority = 1)
+    @Test(priority = 10, groups = {"admin", "arttype"}, dependsOnMethods = "addArtTypeTest")
     public void updateArtTypeTest() {
         // login.adminLogin();
         ArtType artType = new ArtType(driver);
@@ -59,7 +59,7 @@ public class ArtTypeTest extends SetupDriver{
         artType.printTable();
     }
     
-    @Test(priority = 2)
+    @Test(priority = 11, groups = {"admin", "arttype"}, dependsOnMethods = "addArtTypeTest")
     public void deleteArtTypeTest() {
         // login.adminLogin();
         ArtType artType = new ArtType(driver);

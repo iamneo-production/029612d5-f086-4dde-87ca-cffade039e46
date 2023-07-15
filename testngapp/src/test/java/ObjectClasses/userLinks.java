@@ -19,9 +19,9 @@ public class userLinks {
         WebElement artgallery = driver.findElement(By.linkText("Art Gallery"));
         click(artgallery);
         String pageTitle = driver.getTitle();
-        System.out.println(pageTitle);
-        
-        System.out.println("Art Gallery Link");
+        System.out.println("Art Gallery Logo Link");
+        System.out.println("\t Page Title: "+pageTitle +"\n");
+
         return pageTitle;
     }
 
@@ -32,9 +32,9 @@ public class userLinks {
         click(readmore);
 
         String pageTitle = driver.getTitle();
-        System.out.println(pageTitle);
-        
         System.out.println("Read more Link");
+        System.out.println("\t Page Title: "+pageTitle +"\n");        
+        
         return pageTitle;
     }
 
@@ -48,8 +48,8 @@ public class userLinks {
         click(arrow);
         
         String pageTitle = driver.getTitle();
-        System.out.println(pageTitle);
-        System.out.println("Arrow Link");
+        System.out.println("Scroll to top Link");
+        System.out.println("\t Page Title: "+pageTitle +"\n");
         return pageTitle;
     }
     

@@ -10,13 +10,13 @@ import ObjectClasses.userLinks;
 
 public class userLinksTest extends SetupDriver{
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void artType() {
         System.out.println("\n\n|| USER LINKS ||");
     }
 
 
-    @Test(priority = 0)
+    @Test(priority = 36, groups = {"user"})
     public void linkcheck()
     {
         userLinks uLinks = new userLinks(driver);

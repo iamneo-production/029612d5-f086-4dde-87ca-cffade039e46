@@ -14,17 +14,17 @@ public class ArtProductTest extends SetupDriver{
     // String imgpath = System.getProperty("user.dir") + "/resources/illustration4.jpg";
     String imgpath = "/home/seluser/sample2.jpeg";
 
-    @BeforeClass
+    @BeforeClass(alwaysRun=true)
     public void artType() {
         System.out.println("\n\n|| ART PRODUCT ||");
     }
 
-    @Test(priority = 0)
+    @Test(priority = 15, groups = {"admin", "artProduct"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void addArtProductTest() {
         // login.adminLogin();
         ArtProduct artProduct = new ArtProduct(driver);
         artProduct.addArtProduct("Marvel", imgpath, "1000", "Potrait", "Medium", "Maddy", "Painting", "Oil on Canvas", "7000", "ARTISTIC PAINTINGS... ");
- 
+
         Alert alert = driver.switchTo().alert();
         String alertMsg = alert.getText();
         alert.accept();     
@@ -35,7 +35,7 @@ public class ArtProductTest extends SetupDriver{
         artProduct.printTable();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 16, groups = {"admin", "artProduct"}, dependsOnMethods = "addArtProductTest")
     public void updateArtProductTest() {
         // login.adminLogin();
         ArtProduct artProduct = new ArtProduct(driver);
@@ -51,7 +51,7 @@ public class ArtProductTest extends SetupDriver{
         artProduct.printTable();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 17, groups = {"admin", "artProduct"}, dependsOnMethods = "addArtProductTest")
     public void deleteArtProductTest() {
         // login.adminLogin();
         ArtProduct artProduct = new ArtProduct(driver);

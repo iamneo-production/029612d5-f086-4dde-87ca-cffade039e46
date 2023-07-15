@@ -47,11 +47,16 @@ public class userViewDetails extends userEnquiry{
 
             List<WebElement> cards = driver.findElements(By.className("product-toys-info"));
 
+            System.out.println("Option Name: "+nameArtype);
+            System.out.println(nameArtype+ ": Product Page");
             if (driver.getPageSource().contains("Enquiry")) {
+                System.out.println("Availaible Products- ");
 
                 for (WebElement card : cards) {
 
                     String productName = card.findElement(By.tagName("h4")).getText();
+                    System.out.println("\n");
+
                     System.out.println(productName);
                     String viewdetailsbutton = card.findElement(By.className("link-product-add-cart")).getAttribute("href");
 
@@ -80,10 +85,12 @@ public class userViewDetails extends userEnquiry{
                     System.out.println();
                 }
             }else{
-                System.out.println("No product available: "+nameArtype);
+                System.out.println("\tNo Product Available");
             }
             driver.close();
             driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString());
+            System.out.println("\n");
+
         }
     }
 

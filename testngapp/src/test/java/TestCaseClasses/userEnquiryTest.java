@@ -9,13 +9,13 @@ import ObjectClasses.SetupDriver;
 import ObjectClasses.userEnquiry;
 
 public class userEnquiryTest extends SetupDriver {
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void artType() {
         System.out.println("\n\n|| USER ENQUIRY ||");
     }
 
-    @Test(priority = 0)
-    public void dropdown()
+    @Test(priority = 35, groups = {"user"})
+    public void enquiry()
     {
         userEnquiry uEnquiry = new userEnquiry(driver);
 

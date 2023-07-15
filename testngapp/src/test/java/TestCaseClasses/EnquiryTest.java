@@ -15,13 +15,13 @@ public class EnquiryTest extends SetupDriver{
 
     String enquiryNumber;
 
-    @Test(priority = 0)
+    @Test(priority = 18, groups = {"admin", "enquiry"})
     public void addEnquiryTest() {
         System.out.println("\n\n|| ENQUIRY ||\n");
 
         Enquiry enquiry = new Enquiry(driver);
         enquiry.openNewTab();
-        enquiry.addEnquiry("Drake", "drake@gmail.com", "5464514753", "Awesome Art!");
+        enquiry.addEnquiry("john", "john@gmail.com", "1594826370", "Awesome Art!");
         
         Alert alert = driver.switchTo().alert();
         String alertMsg = alert.getText();
@@ -32,7 +32,7 @@ public class EnquiryTest extends SetupDriver{
         assertEquals("Your enquiry successfully send. Your Enquiry number", alertMsg.split("is")[0].strip());
     }
     
-    @Test(priority = 1)
+    @Test(priority = 19, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void unansweredEnquiryTest() {
         Enquiry enquiry = new Enquiry(driver);
         enquiry.unansweredEnquiry();
@@ -43,7 +43,7 @@ public class EnquiryTest extends SetupDriver{
         assertTrue(!enquiry.getRemarkDate().isBlank());
     }
     
-    @Test(priority = 2)
+    @Test(priority = 20, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void answeredEnquiryTest() {
         Enquiry enquiry = new Enquiry(driver);
         enquiry.answeredEnquiry();

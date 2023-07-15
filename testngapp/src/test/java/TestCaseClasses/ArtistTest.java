@@ -13,12 +13,12 @@ public class ArtistTest extends SetupDriver{
 
     String imgpath = "/home/seluser/sample2.jpeg";
     
-    @BeforeClass
+    @BeforeClass(alwaysRun=true)
     public void artType() {
         System.out.println("\n\n|| ARTIST ||");
     }
     
-    @Test(priority = 0)
+    @Test(priority = 6, groups = {"admin", "artist", "smoketest"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void addArtistTest() {
         // login.adminLogin();
         Artist artist = new Artist(driver);
@@ -35,7 +35,7 @@ public class ArtistTest extends SetupDriver{
         artist.printTable();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 7, groups = {"admin", "artist"}, dependsOnMethods = "addArtistTest")
     public void updateArtistTest() {
         // login.adminLogin();
         Artist artist = new Artist(driver);
@@ -51,7 +51,7 @@ public class ArtistTest extends SetupDriver{
         artist.printTable();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 8, groups = {"admin", "artist", "smoketest"}, dependsOnMethods = "addArtistTest")
     public void deleteArtistTest() {
         // login.adminLogin();
         Artist artist = new Artist(driver);

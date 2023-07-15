@@ -17,15 +17,14 @@ public class PagesTest extends SetupDriver{
         System.out.println("\n\n|| ADMIN PAGES ||");
     }
 
-    @Test(priority = 0)
+    @Test(priority = 24, groups = {"admin", "pages"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void pagesMenuTestaboutus() {
-        System.out.println("ABOUT US");
-        System.out.println();
+        System.out.println("\n\nABOUT US\n");
         AboutUs aboutus = new AboutUs(driver);
         aboutus.pageSubmenu();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 25, groups = {"admin", "pages"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void updateAboutUsPageTestaboutus() {
         AboutUs aboutus = new AboutUs(driver);
         String title = "About Us";
@@ -39,17 +38,15 @@ public class PagesTest extends SetupDriver{
         aboutus.userSideCheckAboutus(title, description);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 26, groups = {"admin", "pages"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void pagesMenuTestcontactus() {
-        System.out.println();
-        System.out.println("CONTACT US");
-        System.out.println();
+        System.out.println("\n\nCONTACT US\n");
         ContactUs contactus = new ContactUs(driver);
         contactus.pageSubmenu();
     }
 
-    @Test(priority = 3)
-    public void updateAboutUsPageTestcontactus() {
+    @Test(priority = 27, groups = {"admin", "pages"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
+    public void updateContactUsPageTestContactUs() {
         ContactUs contactus = new ContactUs(driver);
 
         String title = "Contact Us";

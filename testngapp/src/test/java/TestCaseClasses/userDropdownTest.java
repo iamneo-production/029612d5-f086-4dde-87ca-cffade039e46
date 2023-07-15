@@ -9,12 +9,12 @@ import ObjectClasses.userDropdown;
 
 public class userDropdownTest extends SetupDriver {
 
-    @BeforeClass
+    @BeforeClass(alwaysRun=true)
     public void artType() {
         System.out.println("\n\n|| USER DROPDOWN ||");
     }
 
-    @Test(priority = 0)
+    @Test(priority = 34, groups = {"user", "regression"})
     public void dropdown()
     {
         userDropdown uDropdown = new userDropdown(driver);

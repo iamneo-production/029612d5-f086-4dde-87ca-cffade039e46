@@ -3,7 +3,78 @@
 
 <suite name="Art Gallery Testing">
 
-    <test name="Admin: Login">
+    <test name="test">
+        <groups>
+            <run>
+                <include name="login" />
+                <!-- <include name="smoketest" /> -->
+                <include name="admin" />
+                <include name="logout" />
+                <include name="user" />
+                <!-- <include name="regression" /> -->
+            </run>
+        </groups>
+        <classes>
+            <class name="TestCaseClasses.LoginTest" />
+            <class name="TestCaseClasses.DashboardDetailsTest" />
+            <class name="TestCaseClasses.ArtistTest" />
+            <class name="TestCaseClasses.ArtTypeTest" />
+            <class name="TestCaseClasses.ArtMediumTest" />
+            <class name="TestCaseClasses.ArtProductTest" />
+            <class name="TestCaseClasses.EnquiryTest" />
+            <class name="TestCaseClasses.EnquirySearchTest" />
+            <class name="TestCaseClasses.PagesTest" />
+            <class name="TestCaseClasses.LogoutTest" />
+            <class name="TestCaseClasses.userNavbarTest" />
+            <class name="TestCaseClasses.userDropdownTest" />
+            <class name="TestCaseClasses.userEnquiryTest" />
+            <class name="TestCaseClasses.userLinksTest" />
+            <class name="TestCaseClasses.userEnquiryTest" />
+            <class name="TestCaseClasses.userViewDetailsTest" />
+            <class name="TestCaseClasses.userSearchTest" />
+        </classes>
+    </test>
+
+
+
+    <!-- <test name="Admin">
+        <groups>
+            <run>
+                <include name="dashboard" />
+                <include name="artist" />
+                <include name="arttype" />
+                <include name="artMedium" />
+                <include name="artProduct" />
+                <include name="enquiry" />
+                <include name="pages" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestCaseClasses.LoginTest" />
+            <class name="TestCaseClasses.DashboardDetailsTest" />
+            <class name="TestCaseClasses.ArtistTest" />
+            <class name="TestCaseClasses.ArtTypeTest" />
+            <class name="TestCaseClasses.ArtMediumTest" />
+            <class name="TestCaseClasses.ArtProductTest" />
+            <class name="TestCaseClasses.EnquiryTest" />
+            <class name="TestCaseClasses.EnquirySearchTest" />
+            <class name="TestCaseClasses.PagesTest" />
+            <class name="TestCaseClasses.LogoutTest" />
+            <class name="TestCaseClasses.LogoutTest" />
+            <class name="TestCaseClasses.userNavbarTest" />
+            <class name="TestCaseClasses.userDropdownTest" />
+            <class name="TestCaseClasses.userEnquiryTest" />
+            <class name="TestCaseClasses.userLinksTest" />
+            <class name="TestCaseClasses.userViewDetailsTest" />
+            <class name="TestCaseClasses.userSearchTest" />
+        </classes>
+    </test> -->
+
+
+
+
+
+    <!-- <test name="Admin: Login">
         <classes>
             <class name="TestCaseClasses.LoginTest" />
         </classes>
@@ -111,6 +182,6 @@
         <classes>
             <class name="TestCaseClasses.userSearchTest" />
         </classes>
-    </test>   
+    </test>    -->
 
 </suite>

@@ -56,7 +56,10 @@ public class userEnquiry {
             driver.get(optionsLink);
 
             List<WebElement> cards = driver.findElements(By.className("product-toys-info"));
+            System.out.println("Option Name: "+nameArtype);
+            System.out.println("\t"+nameArtype + " Product Page");
             if (driver.getPageSource().contains("Enquiry")) {
+                System.out.println("\t Availaible Products: ");
                 for (WebElement card : cards) {
                     String productName = card.findElement(By.tagName("h4")).getText();
 
@@ -67,9 +70,7 @@ public class userEnquiry {
                     driver.get(enquirybutton);
 
                     String enquiryheadlline = driver.getTitle();
-                    System.out.println("Art Type with product availaible "+nameArtype+ ":- ");
-
-                    System.out.println(enquiryheadlline + " button clicked for "+productName);
+                    System.out.println("\t Art Enquiry button enabled for "+productName);
 
                     driver.close();
                     driver.switchTo().window(driver.getWindowHandles().toArray()[1].toString());
@@ -80,7 +81,7 @@ public class userEnquiry {
 
             if(driver.getPageSource().contains("No Record Found"))
                 {
-                    System.out.println("Art Type with no product records: "+nameArtype);
+                    System.out.println("\t No Products Available!");
                     String displayedmessage = driver.findElement(By.xpath("/html/body/section/div/div/div[2]/div/h3")).getText();
                     // System.out.println(displayedmessage);
                 }
@@ -88,6 +89,8 @@ public class userEnquiry {
             driver.close();
 
             driver.switchTo().window(driver.getWindowHandles().toArray()[0].toString());
+            System.out.println("\n");
+
         }
         return actualenquirybuttoncount;
     }

@@ -17,14 +17,14 @@ public class userNavbar {
     {
         WebElement navHome = driver.findElement(By.xpath("/html/body/div[1]/nav/div/ul/li[1]/a"));
         click(navHome);
-        System.out.println("Home");
+        System.out.println("Home \n");
     }
 
     public void about()
     {
         WebElement navAbout=driver.findElement(By.xpath("//*[@id='navbarSupportedContent']/ul/li[2]/a"));
         click(navAbout);
-        System.out.println("About Us");
+        System.out.println("About Us \n");
 
     }
 
@@ -40,16 +40,14 @@ public class userNavbar {
     {
         WebElement navContactus=driver.findElement(By.xpath("//*[@id=\"navbarSupportedContent\"]/ul/li[4]/a"));
         click(navContactus);
-        System.out.println("Contact Us");
-
+        System.out.println("\nContact Us\n");
     }
 
     public void admin()
     {
         WebElement navAdmin=driver.findElement(By.xpath("//*[@id=\"navbarSupportedContent\"]/ul/li[5]/a"));
         click(navAdmin);
-        System.out.println("Admin");
-
+        System.out.println("Admin \n");
     }
     
     public void homepage()

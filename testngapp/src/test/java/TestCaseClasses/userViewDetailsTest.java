@@ -8,12 +8,12 @@ import ObjectClasses.userViewDetails;
 
 public class userViewDetailsTest extends SetupDriver {
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void artType() {
         System.out.println("\n\n|| USER VIEW DETAILS ||");
     }
     
-    @Test(priority = 0)
+    @Test(priority = 37, groups = {"user", "regression"})
     public void search()
     {
         userViewDetails uDetails = new userViewDetails(driver);
