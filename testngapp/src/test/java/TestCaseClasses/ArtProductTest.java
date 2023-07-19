@@ -1,8 +1,7 @@
 package TestCaseClasses;
 
-import static org.junit.Assert.assertEquals;
-
 import org.openqa.selenium.Alert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -15,7 +14,7 @@ public class ArtProductTest extends SetupDriver{
     String imgpath = "/home/seluser/sample2.jpeg";
 
     @BeforeClass(alwaysRun=true)
-    public void artType() {
+    public void artProduct() {
         System.out.println("\n\n|| ART PRODUCT ||");
     }
 
@@ -29,7 +28,7 @@ public class ArtProductTest extends SetupDriver{
         String alertMsg = alert.getText();
         alert.accept();     
         
-        assertEquals("Art product details has been submitted.", alertMsg); 
+        Assert.assertEquals("Art product details has been submitted.", alertMsg); 
         System.out.println("\nArt Product Added SuccessFully!");
         artProduct.navigateToManagetoArtProductPage();
         artProduct.printTable();
@@ -45,7 +44,7 @@ public class ArtProductTest extends SetupDriver{
         String alertMsg = alert.getText();
         alert.accept();     
         
-        assertEquals("Art product has been updated.", alertMsg); 
+        Assert.assertEquals("Art product has been updated.", alertMsg); 
         System.out.println("\nArt Product Updated SuccessFully!");
         artProduct.navigateToManagetoArtProductPage();
         artProduct.printTable();
@@ -61,7 +60,7 @@ public class ArtProductTest extends SetupDriver{
         String alertMsg = alert.getText();
         alert.accept();     
         
-        assertEquals("Data deleted", alertMsg); 
+        Assert.assertEquals("Data deleted", alertMsg); 
         System.out.println("\nArt Product Deleted SuccessFully!");
         artProduct.printTable();
     }

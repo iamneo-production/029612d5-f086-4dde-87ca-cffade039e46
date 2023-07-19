@@ -1,13 +1,14 @@
 package TestCaseClasses;
-import org.testng.annotations.BeforeClass;
 
+
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import ObjectClasses.SetupDriver;
 import ObjectClasses.userSearch;
 
 public class userSearchTest extends SetupDriver {
     @BeforeClass(alwaysRun = true)
-    public void artType() {
+    public void userSearch() {
         System.out.println("\n\n|| USER SEARCH ||");
     }
 

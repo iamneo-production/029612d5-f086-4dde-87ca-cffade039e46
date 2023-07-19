@@ -1,10 +1,9 @@
 package TestCaseClasses;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -33,7 +32,7 @@ public class EnquirySearchTest extends SetupDriver{
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.enquirySearch(sName);
         
-        assertEquals(sName, data.get(0).get(2).getText());
+        Assert.assertEquals(sName, data.get(0).get(2).getText());
         System.out.println("\nEnquiry Search By Name : " + sName);
         enquiry.printTable();
     }
@@ -44,7 +43,7 @@ public class EnquirySearchTest extends SetupDriver{
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.enquirySearch(sEnquiryNumber);
         
-        assertEquals(sEnquiryNumber, data.get(0).get(1).getText());
+        Assert.assertEquals(sEnquiryNumber, data.get(0).get(1).getText());
         System.out.println("\nEnquiry Search By Number : " + sEnquiryNumber);
         enquiry.printTable();
     }
@@ -55,7 +54,7 @@ public class EnquirySearchTest extends SetupDriver{
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.enquirySearch(sMobileNumber);
 
-        assertEquals(sMobileNumber, data.get(0).get(3).getText());
+        Assert.assertEquals(sMobileNumber, data.get(0).get(3).getText());
         System.out.println("\nEnquiry Search By Mobile Number : " + sMobileNumber);
         enquiry.printTable();
     }

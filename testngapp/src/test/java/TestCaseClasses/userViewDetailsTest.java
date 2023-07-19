@@ -9,7 +9,7 @@ import ObjectClasses.userViewDetails;
 public class userViewDetailsTest extends SetupDriver {
 
     @BeforeClass(alwaysRun = true)
-    public void artType() {
+    public void userViewDetails() {
         System.out.println("\n\n|| USER VIEW DETAILS ||");
     }
     

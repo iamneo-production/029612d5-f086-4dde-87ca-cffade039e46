@@ -1,8 +1,7 @@
 package TestCaseClasses;
 
-import static org.junit.Assert.assertEquals;
-
 import org.openqa.selenium.Alert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -30,7 +29,7 @@ public class ArtTypeTest extends SetupDriver{
         alert.accept(); 
         
         //Checking whether Art type is added successfully or not 
-        assertEquals("Artist type has been added.", alertMsg); 
+        Assert.assertEquals("Artist type has been added.", alertMsg); 
         System.out.println("\nArtType Added SuccessFully!");
 
         //Displaying all the available art type
@@ -51,7 +50,7 @@ public class ArtTypeTest extends SetupDriver{
         alert.accept();    
 
         //Checking whether Art type is updated successfully or not
-        assertEquals("Art type has been updated.", alertMsg); 
+        Assert.assertEquals("Art type has been updated.", alertMsg); 
         System.out.println("\nArtType Updated Successfully!");
         artType.navigateToManagetoArtTypePage();
 
@@ -72,7 +71,7 @@ public class ArtTypeTest extends SetupDriver{
         alert.accept();    
 
         //Checking whether Art type is deleted successfully or not
-        assertEquals("Data deleted", alertMsg); 
+        Assert.assertEquals("Data deleted", alertMsg); 
         System.out.println("\nArtType Deleted Successfully!");
         
         //Displaying all the available art type 

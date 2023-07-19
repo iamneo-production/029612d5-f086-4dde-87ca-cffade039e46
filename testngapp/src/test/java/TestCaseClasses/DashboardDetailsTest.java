@@ -1,11 +1,10 @@
 package TestCaseClasses;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -21,7 +20,7 @@ public class DashboardDetailsTest extends SetupDriver{
 
     
     @BeforeClass(alwaysRun=true)
-    public void artType() {
+    public void dashboard() {
         System.out.println("\n\n|| ADMIN DASHBOARD ||");
     }
     
@@ -32,9 +31,9 @@ public class DashboardDetailsTest extends SetupDriver{
 
         List<List<WebElement>> data = artist.dashboardDetails();
 
-        // assertEquals(3, data.size());
+        //  Assert.assertEquals(3, data.size());
         String title = driver.getTitle();
-        assertEquals("Manage Artist | Art Gallery Management System", title);
+        Assert.assertEquals("Manage Artist | Art Gallery Management System", title);
         
         System.out.println("\nArtist Details!");
         artist.printTable();
@@ -47,9 +46,9 @@ public class DashboardDetailsTest extends SetupDriver{
 
         List<List<WebElement>> data = artType.dashboardDetails();
 
-        // assertEquals(8, data.size());
+        //  Assert.assertEquals(8, data.size());
         String title = driver.getTitle();
-        assertEquals("Manage Art Type| Art Gallery Management System", title);
+        Assert.assertEquals("Manage Art Type| Art Gallery Management System", title);
         
         System.out.println("\nArtType Details!");
         artType.printTable();
@@ -62,9 +61,9 @@ public class DashboardDetailsTest extends SetupDriver{
 
         List<List<WebElement>> data = artMedium.dashboardDetails();
 
-        // assertEquals(11, data.size());
+        //  Assert.assertEquals(11, data.size());
         String title = driver.getTitle();
-        assertEquals("Manage Art Medium| Art Gallery Management System", title);
+        Assert.assertEquals("Manage Art Medium| Art Gallery Management System", title);
         
         System.out.println("\nArt Medium Details!");
         artMedium.printTable();
@@ -76,9 +75,9 @@ public class DashboardDetailsTest extends SetupDriver{
         ArtProduct artProduct = new ArtProduct(driver);
         List<List<WebElement>> data = artProduct.dashboardDetails();
 
-        // assertEquals(3, data.size());
+        //  Assert.assertEquals(3, data.size());
         String title = driver.getTitle();
-        assertEquals("Manage Art Product| Art Gallery Management System", title);
+        Assert.assertEquals("Manage Art Product| Art Gallery Management System", title);
         
         System.out.println("\nArt Product Details!");
         artProduct.printTable();
@@ -90,9 +89,9 @@ public class DashboardDetailsTest extends SetupDriver{
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.AnsweredEnquiryDetails();
 
-        // assertEquals(62, data.size());
+        //  Assert.assertEquals(62, data.size());
         String title = driver.getTitle();
-        assertEquals("Answer Enquiry | Art Gallery Management System", title);
+        Assert.assertEquals("Answer Enquiry | Art Gallery Management System", title);
         
         System.out.println("\nAnswered Enquiry Details!");
         enquiry.printTable();
@@ -104,9 +103,9 @@ public class DashboardDetailsTest extends SetupDriver{
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.UnansweredEnquiryDetails();
 
-        // assertEquals(26, data.size());
+        //  Assert.assertEquals(26, data.size());
         String title = driver.getTitle();
-        assertEquals("Unanswer Enquiry | Art Gallery Management System", title);
+        Assert.assertEquals("Unanswer Enquiry | Art Gallery Management System", title);
         
         System.out.println("\nUnanswered Enquiry Details!");
         enquiry.printTable();

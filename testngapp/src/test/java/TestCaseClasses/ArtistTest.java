@@ -1,8 +1,7 @@
 package TestCaseClasses;
 
-import static org.junit.Assert.assertEquals;
-
 import org.openqa.selenium.Alert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -14,7 +13,7 @@ public class ArtistTest extends SetupDriver{
     String imgpath = "/home/seluser/sample2.jpeg";
     
     @BeforeClass(alwaysRun=true)
-    public void artType() {
+    public void artist() {
         System.out.println("\n\n|| ARTIST ||");
     }
     
@@ -30,7 +29,7 @@ public class ArtistTest extends SetupDriver{
         String alertMsg = alert.getText();
         alert.accept();    
         
-        assertEquals("Artist details has been added.", alertMsg); 
+        Assert.assertEquals("Artist details has been added.", alertMsg); 
         System.out.println("\nArtist Added SuccessFully!");
         artist.printTable();
     }
@@ -45,7 +44,7 @@ public class ArtistTest extends SetupDriver{
         String alertMsg = alert.getText();
         alert.accept();    
         
-        assertEquals("Artist details has been updated.", alertMsg); 
+        Assert.assertEquals("Artist details has been updated.", alertMsg); 
         System.out.println("\nArtist Updated SuccessFully!");
         artist.navigateToManagetoArtistPage();
         artist.printTable();
@@ -61,7 +60,7 @@ public class ArtistTest extends SetupDriver{
         String alertMsg = alert.getText();
         alert.accept();    
         
-        assertEquals("Data deleted", alertMsg); 
+        Assert.assertEquals("Data deleted", alertMsg); 
         System.out.println("\nArtist Deleted SuccessFully!");
         artist.printTable();
     }

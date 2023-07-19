@@ -1,8 +1,7 @@
 package TestCaseClasses;
 
-import static org.junit.Assert.assertEquals;
-
 import org.openqa.selenium.Alert;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -13,7 +12,7 @@ import ObjectClasses.SetupDriver;
 
 public class PagesTest extends SetupDriver{
     @BeforeClass
-    public void artType() {
+    public void pages() {
         System.out.println("\n\n|| ADMIN PAGES ||");
     }
 
@@ -32,7 +31,7 @@ public class PagesTest extends SetupDriver{
         aboutus.updateAboutUsPage(title,description);
 
         Alert alert = driver.switchTo().alert();
-        assertEquals("About Us has been updated.", alert.getText());
+        Assert.assertEquals("About Us has been updated.", alert.getText());
         alert.accept();
         driver.navigate().to("http://artgallery.neohire.io/admin/dashboard.php");
         aboutus.userSideCheckAboutus(title, description);
@@ -59,7 +58,7 @@ public class PagesTest extends SetupDriver{
         contactus.updateContactUsPage(title, email, phonenumber, timings, description);
 
         Alert alert = driver.switchTo().alert();
-        assertEquals("Contact Us has been updated..", alert.getText());
+        Assert.assertEquals("Contact Us has been updated..", alert.getText());
         alert.accept();
         driver.navigate().to("http://artgallery.neohire.io/admin/dashboard.php");
         contactus.userSideCheckContactus(title, email, phonenumber, timings, description);

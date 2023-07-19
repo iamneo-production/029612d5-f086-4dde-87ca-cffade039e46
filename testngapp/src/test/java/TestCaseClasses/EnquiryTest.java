@@ -3,9 +3,7 @@
 package TestCaseClasses;
 
 import org.testng.annotations.Test;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
+import org.testng.Assert;
 import org.openqa.selenium.Alert;
 
 import ObjectClasses.Enquiry;
@@ -29,7 +27,7 @@ public class EnquiryTest extends SetupDriver{
 
         enquiry.closeNewTab();
         enquiryNumber = alertMsg.split("is")[1].strip();
-        assertEquals("Your enquiry successfully send. Your Enquiry number", alertMsg.split("is")[0].strip());
+        Assert.assertEquals("Your enquiry successfully send. Your Enquiry number", alertMsg.split("is")[0].strip());
     }
     
     @Test(priority = 19, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
@@ -40,7 +38,7 @@ public class EnquiryTest extends SetupDriver{
         Alert alert = driver.switchTo().alert();
         alert.accept(); 
 
-        assertTrue(!enquiry.getRemarkDate().isBlank());
+        Assert.assertTrue(!enquiry.getRemarkDate().isBlank());
     }
     
     @Test(priority = 20, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
@@ -51,6 +49,6 @@ public class EnquiryTest extends SetupDriver{
         System.out.println("\nAnswered Enquiry Details \n");
         enquiry.printEnquiryDetails();
         
-        assertEquals(enquiryNumber, enquiry.getEnquiryNumber());
+        Assert.assertEquals(enquiryNumber, enquiry.getEnquiryNumber());
     }
 }

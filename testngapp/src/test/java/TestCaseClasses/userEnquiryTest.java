@@ -1,7 +1,6 @@
 package TestCaseClasses;
 
-import static org.junit.Assert.assertEquals;
-
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -10,7 +9,7 @@ import ObjectClasses.userEnquiry;
 
 public class userEnquiryTest extends SetupDriver {
     @BeforeClass(alwaysRun = true)
-    public void artType() {
+    public void userEnquiry() {
         System.out.println("\n\n|| USER ENQUIRY ||");
     }
 
@@ -22,6 +21,6 @@ public class userEnquiryTest extends SetupDriver {
         int expectedenquirybuttons= uEnquiry.enquirybuttoncount();
         int actualenquirybuttons = uEnquiry.enquirybutton();
 
-        assertEquals(expectedenquirybuttons, actualenquirybuttons);
+        Assert.assertEquals(expectedenquirybuttons, actualenquirybuttons);
     }
 }
