@@ -33,7 +33,7 @@ public class EnquiryTest extends SetupDriver{
     @Test(priority = 19, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails", "addEnquiryTest"})
     public void unansweredEnquiryTest() {
         Enquiry enquiry = new Enquiry(driver);
-        enquiry.unansweredEnquiry(enquiryNumber);
+        enquiry.unansweredEnquiry(enquiryNumber); 
 
         Alert alert = driver.switchTo().alert();
         alert.accept(); 

@@ -10,7 +10,7 @@
                 <!-- <include name="smoketest" /> -->
                 <include name="admin" />
                 <include name="logout" />
-                <!-- <include name="user" /> -->
+                <include name="user" />
                 <!-- <include name="regression" /> -->
             </run>
         </groups>

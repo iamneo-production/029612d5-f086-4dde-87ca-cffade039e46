@@ -22,7 +22,7 @@ public class EnquirySearchTest extends SetupDriver{
         Enquiry enquiry = new Enquiry(driver);
         String[] searchData = enquiry.fetchSearchData(EnquiryTest.enquiryNumber).split(" ");
         sEnquiryNumber = searchData[1];
-        sName = searchData[2];
+        sName = searchData[2]; 
         sMobileNumber = searchData[3];
     }
 

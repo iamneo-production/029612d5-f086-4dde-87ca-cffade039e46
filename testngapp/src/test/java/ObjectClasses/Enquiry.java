@@ -239,7 +239,7 @@ public class Enquiry {
     public void clickUpdateButton() {
         WebElement update=driver.findElement(By.xpath("/html/body/section/section/section/div[2]/div/section/table/tbody/tr[7]/td/button"));
         click(update);
-    }
+    } 
     
     public String getRemarkDate() {
         return driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table/tbody/tr[7]/td")).getText();
