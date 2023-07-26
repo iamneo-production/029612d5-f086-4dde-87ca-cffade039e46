@@ -25,4 +25,9 @@ public class MyTestListener implements ITestListener {
         SetupDriver.test.log(Status.FAIL, "Test Failed: " + result.getThrowable());
     }
 
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        SetupDriver.test.log(Status.SKIP, "Test Skipped: " + result.getThrowable());
+    }
+
 }

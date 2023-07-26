@@ -11,7 +11,7 @@ import ObjectClasses.SetupDriver;
 
 public class EnquiryTest extends SetupDriver{
 
-    String enquiryNumber;
+    public static String enquiryNumber;
 
     @Test(priority = 18, groups = {"admin", "enquiry"})
     public void addEnquiryTest() {
@@ -19,7 +19,7 @@ public class EnquiryTest extends SetupDriver{
 
         Enquiry enquiry = new Enquiry(driver);
         enquiry.openNewTab();
-        enquiry.addEnquiry("john", "john@gmail.com", "1594826370", "Awesome Art!");
+        enquiry.addEnquiry("max", "max@gmail.com", "8444465644", "Awesome Art!");
         
         Alert alert = driver.switchTo().alert();
         String alertMsg = alert.getText();
@@ -27,13 +27,13 @@ public class EnquiryTest extends SetupDriver{
 
         enquiry.closeNewTab();
         enquiryNumber = alertMsg.split("is")[1].strip();
-        Assert.assertEquals("Your enquiry successfully send. Your Enquiry number", alertMsg.split("is")[0].strip());
+        Assert.assertEquals("Your enquiry successfully send. Your Enquiry numbe", alertMsg.split("is")[0].strip());
     }
     
-    @Test(priority = 19, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
+    @Test(priority = 19, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails", "addEnquiryTest"})
     public void unansweredEnquiryTest() {
         Enquiry enquiry = new Enquiry(driver);
-        enquiry.unansweredEnquiry();
+        enquiry.unansweredEnquiry(enquiryNumber);
 
         Alert alert = driver.switchTo().alert();
         alert.accept(); 
@@ -41,10 +41,10 @@ public class EnquiryTest extends SetupDriver{
         Assert.assertTrue(!enquiry.getRemarkDate().isBlank());
     }
     
-    @Test(priority = 20, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
+    @Test(priority = 20, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails", "addEnquiryTest"})
     public void answeredEnquiryTest() {
         Enquiry enquiry = new Enquiry(driver);
-        enquiry.answeredEnquiry();
+        enquiry.answeredEnquiry(enquiryNumber);
 
         System.out.println("\nAnswered Enquiry Details \n");
         enquiry.printEnquiryDetails();
