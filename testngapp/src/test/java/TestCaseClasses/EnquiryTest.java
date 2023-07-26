@@ -27,7 +27,7 @@ public class EnquiryTest extends SetupDriver{
 
         enquiry.closeNewTab();
         enquiryNumber = alertMsg.split("is")[1].strip();
-        Assert.assertEquals("Your enquiry successfully send. Your Enquiry numbe", alertMsg.split("is")[0].strip());
+        Assert.assertEquals("Your enquiry successfully send. Your Enquiry number", alertMsg.split("is")[0].strip());
     }
     
     @Test(priority = 19, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails", "addEnquiryTest"})
