@@ -20,7 +20,8 @@ public class ArtProductTest extends SetupDriver{
 
     @Test(priority = 15, groups = {"admin", "artProduct"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void addArtProductTest() {
-        // login.adminLogin();
+        test.assignCategory("Art Product");
+        
         ArtProduct artProduct = new ArtProduct(driver);
         artProduct.addArtProduct("Marvel", imgpath, "1000", "Potrait", "Medium", "Maddy", "Painting", "Oil on Canvas", "7000", "ARTISTIC PAINTINGS... ");
 
@@ -36,7 +37,8 @@ public class ArtProductTest extends SetupDriver{
 
     @Test(priority = 16, groups = {"admin", "artProduct"}, dependsOnMethods = "addArtProductTest")
     public void updateArtProductTest() {
-        // login.adminLogin();
+        test.assignCategory("Art Product");
+        
         ArtProduct artProduct = new ArtProduct(driver);
         artProduct.updateArtProduct("Illustration", imgpath, "1000", "Landscape", "Small", "Abir Rajwansh", "Prints", "Acrylics on paper", "5000", "Cool Illustration... ");
 
@@ -52,7 +54,8 @@ public class ArtProductTest extends SetupDriver{
 
     @Test(priority = 17, groups = {"admin", "artProduct"}, dependsOnMethods = "addArtProductTest")
     public void deleteArtProductTest() {
-        // login.adminLogin();
+        test.assignCategory("Art Product");
+        
         ArtProduct artProduct = new ArtProduct(driver);
         artProduct.deleteArtProduct();
 

@@ -17,8 +17,8 @@ public class ArtTypeTest extends SetupDriver{
     
     @Test(priority = 9, groups = {"admin", "arttype"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void addArtTypeTest() {
+        test.assignCategory("Art");
 
-        // login.adminLogin();
         ArtType artType = new ArtType(driver);
         //Adding Art type as pottery  
         artType.addArtType("pottery");
@@ -38,7 +38,7 @@ public class ArtTypeTest extends SetupDriver{
     
     @Test(priority = 10, groups = {"admin", "arttype"}, dependsOnMethods = "addArtTypeTest")
     public void updateArtTypeTest() {
-        // login.adminLogin();
+        test.assignCategory("Art");
         ArtType artType = new ArtType(driver);
         //updating Art type pottery as Sculpture 
         artType.updateArtType("Sculpture");
@@ -60,7 +60,7 @@ public class ArtTypeTest extends SetupDriver{
     
     @Test(priority = 11, groups = {"admin", "arttype"}, dependsOnMethods = "addArtTypeTest")
     public void deleteArtTypeTest() {
-        // login.adminLogin();
+        test.assignCategory("Art");
         ArtType artType = new ArtType(driver);
         //Deleting the Art type Sclpture
         artType.deleteArtType();

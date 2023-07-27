@@ -28,7 +28,8 @@ public class EnquirySearchTest extends SetupDriver{
 
     @Test(priority = 21, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void enquirySearchByNameTest() {
-        // login.adminLogin();
+        test.assignCategory("Enquiry");
+        
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.enquirySearch(sName);
         
@@ -39,7 +40,8 @@ public class EnquirySearchTest extends SetupDriver{
     
     @Test(priority = 22, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void enquirySearchByEnquiryNumberTest() {
-        // login.adminLogin();
+        test.assignCategory("Enquiry");
+        
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.enquirySearch(sEnquiryNumber);
         
@@ -50,7 +52,8 @@ public class EnquirySearchTest extends SetupDriver{
     
     @Test(priority = 23, groups = {"admin", "enquiry"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void enquirySearchByMobileNumberTest() {
-        // login.adminLogin();
+        test.assignCategory("Enquiry");
+        
         Enquiry enquiry = new Enquiry(driver);
         List<List<WebElement>> data = enquiry.enquirySearch(sMobileNumber);
 

@@ -16,6 +16,7 @@ public class userViewDetailsTest extends SetupDriver {
     @Test(priority = 37, groups = {"user", "regression"})
     public void search()
     {
+        test.assignCategory("User");
         userViewDetails uDetails = new userViewDetails(driver);
         uDetails.viewDetails();
     }

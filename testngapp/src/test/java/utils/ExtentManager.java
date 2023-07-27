@@ -26,7 +26,10 @@ public class ExtentManager {
 
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-
+        extent.setSystemInfo("OS", "Windows");
+        extent.setSystemInfo("LANGUAGE", "Java");
+        extent.setSystemInfo("FRAMEWORK", "Selenium, TestNG");
+        
         return extent;
     }
 

@@ -17,7 +17,8 @@ public class ArtMediumTest extends SetupDriver {
 
     @Test(priority = 12, groups = {"admin", "artMedium", "smoketest"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void addArtMediumTest() {
-        // login.adminLogin();
+        test.assignCategory("Art Medium");
+        
         ArtMedium artMedium = new ArtMedium(driver);
         artMedium.addArtMedium("Gold");
         
@@ -33,7 +34,8 @@ public class ArtMediumTest extends SetupDriver {
     
     @Test(priority = 13, groups = {"admin", "artMedium"}, dependsOnMethods = "addArtMediumTest")
     public void updateArtMediumTest() {
-        // login.adminLogin();
+        test.assignCategory("Art Medium");
+        
         ArtMedium artMedium = new ArtMedium(driver);
         artMedium.updateArtMedium("Wood and Bronze");
         
@@ -50,7 +52,8 @@ public class ArtMediumTest extends SetupDriver {
     
     @Test(priority = 14, groups = {"admin", "artMedium", "smoketest"}, dependsOnMethods = "addArtMediumTest")
     public void deleteArtMediumTest() {
-        // login.adminLogin();
+        test.assignCategory("Art Medium");
+        
         ArtMedium artMedium = new ArtMedium(driver);
         artMedium.deleteArtMedium();
 

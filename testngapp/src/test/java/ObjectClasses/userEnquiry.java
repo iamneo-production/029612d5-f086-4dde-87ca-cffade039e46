@@ -1,5 +1,4 @@
 package ObjectClasses;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;

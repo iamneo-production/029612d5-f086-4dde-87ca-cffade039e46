@@ -16,6 +16,7 @@ public class userDropdownTest extends SetupDriver {
     @Test(priority = 34, groups = {"user", "regression"})
     public void dropdown()
     {
+        test.assignCategory("User");
         userDropdown uDropdown = new userDropdown(driver);
         int expecteddropdownsize = uDropdown.dropdownsize();
         int actualdropdownsize =  uDropdown.dropdown();

@@ -9,6 +9,7 @@ public class LogoutTest extends SetupDriver{
     
     @Test(priority = 28, groups = {"logout"})
     public void AdminLogout() {
+        test.assignCategory("Logout");
         Login login = new Login(driver);
         login.adminLogout();
 

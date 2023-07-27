@@ -19,12 +19,11 @@ public class ArtistTest extends SetupDriver{
     
     @Test(priority = 6, groups = {"admin", "artist", "smoketest"}, dependsOnMethods = {"AdminLoginWithValidDetails"})
     public void addArtistTest() {
-        // login.adminLogin();
+        test.assignCategory("Artist");
+        
         Artist artist = new Artist(driver);
-
         artist.addArtist("Rock", "1234567890", "rock@gmail.com", "exampleEducation", "exampleEducation", imgpath);
 
-    
         Alert alert = driver.switchTo().alert();
         String alertMsg = alert.getText();
         alert.accept();    
@@ -36,7 +35,8 @@ public class ArtistTest extends SetupDriver{
 
     @Test(priority = 7, groups = {"admin", "artist"}, dependsOnMethods = "addArtistTest")
     public void updateArtistTest() {
-        // login.adminLogin();
+        test.assignCategory("Artist");
+        
         Artist artist = new Artist(driver);
         artist.updateArtist("john", "1234567890", "john@gmail.com", "exampleEducation", "exampleEducation", imgpath);
 
@@ -52,7 +52,8 @@ public class ArtistTest extends SetupDriver{
 
     @Test(priority = 8, groups = {"admin", "artist", "smoketest"}, dependsOnMethods = "addArtistTest")
     public void deleteArtistTest() {
-        // login.adminLogin();
+        test.assignCategory("Artist");
+        
         Artist artist = new Artist(driver);
         artist.deleteArtist();
 
