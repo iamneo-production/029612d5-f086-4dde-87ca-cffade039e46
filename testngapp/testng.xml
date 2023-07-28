@@ -3,10 +3,26 @@
 
 <suite name="Art Gallery Testing">
 
+    <test name="Admin: Login">
+        <classes>
+            <class name="TestCaseClasses.LoginTest" />
+        </classes>
+    </test>
+    
     <test name="Admin: Art Type">
         <classes>
             <class name="TestCaseClasses.ArtTypeTest" />
         </classes>
     </test>
+
+    <test name="Admin: Logout">
+        <classes>
+            <class name="TestCaseClasses.LogoutTest" />
+        </classes>
+    </test> 
+
+
+   
+
 
 </suite>

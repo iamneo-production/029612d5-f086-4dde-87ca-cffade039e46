@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="79.28" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/coder/project/workspace/testngapp/target/test-classes:/home/coder/project/workspace/testngapp/target/classes:/home/coder/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/coder/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/home/coder/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/coder/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/home/coder/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/coder/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/coder/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/coder/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/coder/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/coder/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/home/coder/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/coder/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/home/coder/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/coder/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/coder/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:"/>
+    <property name="java.vm.vendor" value="Debian"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://tracker.debian.org/openjdk-11"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/coder/project/workspace/testngapp/target/surefire/surefirebooter-20230728045617061_3.jar /home/coder/project/workspace/testngapp/target/surefire 2023-07-28T04-56-16_506-jvmRun1 surefire-20230728045617061_1tmp surefire_0-20230728045617061_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/coder/project/workspace/testngapp/target/test-classes:/home/coder/project/workspace/testngapp/target/classes:/home/coder/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/coder/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/home/coder/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/home/coder/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/home/coder/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/coder/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/home/coder/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/coder/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/coder/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/coder/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/coder/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/coder/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/home/coder/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/coder/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/home/coder/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/home/coder/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/coder/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/coder"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/coder/project/workspace/testngapp"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/coder/project/workspace/testngapp/target/surefire/surefirebooter-20230728045617061_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.18+10-post-Debian-1deb11u1"/>
+    <property name="user.name" value="coder"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.10.162+"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/coder/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugs.debian.org/openjdk-11"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.18"/>
+    <property name="user.dir" value="/home/coder/project/workspace/testngapp"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Debian"/>
+    <property name="java.vm.version" value="11.0.18+10-post-Debian-1deb11u1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="AdminLoginWithInValidDetails" classname="TestCaseClasses.LoginTest" time="2.264">
+    <system-out><![CDATA[
+
+||| TEST SUITE STARTED |||
+
+
+Login Attempt with invalid details is unsuccessfull!
+
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Jul 28, 2023 4:56:27 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="AdminLoginWithValidDetails" classname="TestCaseClasses.LoginTest" time="2.906">
+    <system-out><![CDATA[
+Admin Login successfull!
+
+]]></system-out>
+  </testcase>
+  <testcase name="addArtTypeTest" classname="TestCaseClasses.ArtTypeTest" time="16.45">
+    <system-out><![CDATA[
+
+|| ARTTYPE ||
+
+ArtType Added SuccessFully!
+S.NO  Type of Art     Creation Date        
+-------------------------------------
+1     Serigraphs      2022-12-21 14:24:46  
+2     Prints          2022-12-21 14:25:00  
+3     Painting        2022-12-21 14:25:31  
+4     Street Art      2022-12-21 14:26:06  
+5     Visual art      2022-12-21 14:26:29  
+6     Conceptual art  2022-12-21 14:26:45  
+7     painting        2023-05-10 04:41:26  
+8     illustration    2023-06-16 13:46:00  
+9     pottery         2023-07-28 04:56:40  
+]]></system-out>
+  </testcase>
+  <testcase name="updateArtTypeTest" classname="TestCaseClasses.ArtTypeTest" time="21.187">
+    <system-out><![CDATA[
+ArtType Updated Successfully!
+S.NO  Type of Art     Creation Date        
+-------------------------------------
+1     Serigraphs      2022-12-21 14:24:46  
+2     Prints          2022-12-21 14:25:00  
+3     Painting        2022-12-21 14:25:31  
+4     Street Art      2022-12-21 14:26:06  
+5     Visual art      2022-12-21 14:26:29  
+6     Conceptual art  2022-12-21 14:26:45  
+7     painting        2023-05-10 04:41:26  
+8     illustration    2023-06-16 13:46:00  
+9     Sculpture       2023-07-28 04:56:40  
+]]></system-out>
+  </testcase>
+  <testcase name="deleteArtTypeTest" classname="TestCaseClasses.ArtTypeTest" time="16.642">
+    <system-out><![CDATA[
+ArtType Deleted Successfully!
+S.NO  Type of Art     Creation Date        
+-------------------------------------
+1     Serigraphs      2022-12-21 14:24:46  
+2     Prints          2022-12-21 14:25:00  
+3     Painting        2022-12-21 14:25:31  
+4     Street Art      2022-12-21 14:26:06  
+5     Visual art      2022-12-21 14:26:29  
+6     Conceptual art  2022-12-21 14:26:45  
+7     painting        2023-05-10 04:41:26  
+8     illustration    2023-06-16 13:46:00  
+]]></system-out>
+  </testcase>
+  <testcase name="AdminLogout" classname="TestCaseClasses.LogoutTest" time="3.699">
+    <system-out><![CDATA[Successfully logout
+]]></system-out>
+  </testcase>
+</testsuite>

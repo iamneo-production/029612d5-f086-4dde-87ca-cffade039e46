@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-28T04:56:33 UTC" name="Art Gallery Testing" finished-at="2023-07-28T04:57:36 UTC" duration-ms="63253">
+    <groups>
+    </groups>
+    <test started-at="2023-07-28T04:56:33 UTC" name="Admin: Login" finished-at="2023-07-28T04:56:38 UTC" duration-ms="5206">
+      <class name="TestCaseClasses.LoginTest">
+        <test-method is-config="true" signature="artType()[pri:0, instance:TestCaseClasses.LoginTest@76908cc0]" started-at="2023-07-28T04:56:33 UTC" name="artType" finished-at="2023-07-28T04:56:33 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- artType -->
+        <test-method signature="AdminLoginWithInValidDetails()[pri:0, instance:TestCaseClasses.LoginTest@76908cc0]" started-at="2023-07-28T04:56:33 UTC" name="AdminLoginWithInValidDetails" finished-at="2023-07-28T04:56:35 UTC" duration-ms="2261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminLoginWithInValidDetails -->
+        <test-method signature="AdminLoginWithValidDetails()[pri:1, instance:TestCaseClasses.LoginTest@76908cc0]" started-at="2023-07-28T04:56:35 UTC" name="AdminLoginWithValidDetails" finished-at="2023-07-28T04:56:38 UTC" duration-ms="2906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminLoginWithValidDetails -->
+      </class> <!-- TestCaseClasses.LoginTest -->
+    </test> <!-- Admin: Login -->
+    <test started-at="2023-07-28T04:56:38 UTC" name="Admin: Art Type" finished-at="2023-07-28T04:57:32 UTC" duration-ms="54291">
+      <class name="TestCaseClasses.ArtTypeTest">
+        <test-method is-config="true" signature="artType()[pri:0, instance:TestCaseClasses.ArtTypeTest@636be97c]" started-at="2023-07-28T04:56:38 UTC" name="artType" finished-at="2023-07-28T04:56:38 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- artType -->
+        <test-method signature="addArtTypeTest()[pri:0, instance:TestCaseClasses.ArtTypeTest@636be97c]" started-at="2023-07-28T04:56:38 UTC" name="addArtTypeTest" finished-at="2023-07-28T04:56:54 UTC" duration-ms="16443" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addArtTypeTest -->
+        <test-method signature="updateArtTypeTest()[pri:1, instance:TestCaseClasses.ArtTypeTest@636be97c]" started-at="2023-07-28T04:56:54 UTC" name="updateArtTypeTest" finished-at="2023-07-28T04:57:15 UTC" duration-ms="21183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateArtTypeTest -->
+        <test-method signature="deleteArtTypeTest()[pri:2, instance:TestCaseClasses.ArtTypeTest@636be97c]" started-at="2023-07-28T04:57:15 UTC" name="deleteArtTypeTest" finished-at="2023-07-28T04:57:32 UTC" duration-ms="16638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteArtTypeTest -->
+      </class> <!-- TestCaseClasses.ArtTypeTest -->
+    </test> <!-- Admin: Art Type -->
+    <test started-at="2023-07-28T04:57:32 UTC" name="Admin: Logout" finished-at="2023-07-28T04:57:36 UTC" duration-ms="3696">
+      <class name="TestCaseClasses.LogoutTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCaseClasses.LogoutTest@31368b99]" started-at="2023-07-28T04:56:18 UTC" name="setup" finished-at="2023-07-28T04:56:33 UTC" duration-ms="14684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="AdminLogout()[pri:0, instance:TestCaseClasses.LogoutTest@31368b99]" started-at="2023-07-28T04:57:32 UTC" name="AdminLogout" finished-at="2023-07-28T04:57:36 UTC" duration-ms="3694" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCaseClasses.LogoutTest@31368b99]" started-at="2023-07-28T04:57:36 UTC" name="tearDown" finished-at="2023-07-28T04:57:36 UTC" duration-ms="369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCaseClasses.LogoutTest -->
+    </test> <!-- Admin: Logout -->
+  </suite> <!-- Art Gallery Testing -->
+</testng-results>
