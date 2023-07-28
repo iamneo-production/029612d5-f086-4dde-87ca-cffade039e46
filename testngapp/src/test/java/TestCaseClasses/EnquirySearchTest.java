@@ -21,7 +21,7 @@ public class EnquirySearchTest extends SetupDriver{
     public void fetchData() {
         System.out.println("\n\n|| ENQUIRY SEARCH ||\n");
         Enquiry enquiry = new Enquiry(driver);
-        String[] searchData = enquiry.fetchSearchData().split(" ");
+        String[] searchData = enquiry.fetchSearchData(EnquiryTest.enquiryNumber).split(" ");
         sEnquiryNumber = searchData[1];
         sName = searchData[2];
         sMobileNumber = searchData[3];

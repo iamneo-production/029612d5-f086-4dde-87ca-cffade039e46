@@ -3,15 +3,12 @@ package ObjectClasses;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.sql.rowset.WebRowSet;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Enquiry {
     WebDriver driver;
@@ -28,6 +25,11 @@ public class Enquiry {
     public void scrollToWebElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void click(WebElement element){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", element);
     }
 
 
@@ -56,12 +58,62 @@ public class Enquiry {
     //To print the Table data
 
     public void printTable() {
-        WebElement tableBody = driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table/tbody"));
+        WebElement tableBody = driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table"));
         
         List<WebElement> rows = tableBody.findElements(By.tagName("tr"));
+        List<List<String>> table = new ArrayList<>();
+        
         for(WebElement row:rows){
             scrollToWebElement(row);
-            System.out.println(row.getText().split("View Details")[0]);
+            List<WebElement> cols = row.findElements(By.tagName("td"));
+            if(cols.size()<1){
+                cols = row.findElements(By.tagName("th"));
+            }
+            
+            List<String> data = new ArrayList<>();
+            for(int col=0;col<cols.size()-1;col++){
+                data.add(cols.get(col).getText());
+            }
+
+            table.add(data);
+        }
+        int numCols = table.get(1).size();
+        
+        // Calculate the maximum width of each column
+        int[] colWidths = new int[numCols];
+        for (List<String> row : table) {
+            if(row.size()>0){
+                for (int i = 0; i < numCols; i++) {
+                    int width = row.get(i).length();
+                    if (width > colWidths[i]) {
+                        colWidths[i] = width;
+                    }
+                }
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < colWidths.length; i++) {
+            sum += colWidths[i];
+        }
+        
+
+        // Print the table
+        for (int i=1;i<table.size();i++) {
+            for (int j = 0; j < numCols; j++) {
+                String cell = table.get(i).get(j);
+                int padding = colWidths[j] - cell.length();
+                System.out.print(cell + " ".repeat(padding + 2));
+            }
+            if(i==1){
+                System.out.println();
+                for(int k=0;k<sum;k++){
+                    System.out.print("-");;
+                }
+                System.out.println();
+            }
+            else{
+                System.out.println();
+            }
         }
     }
 
@@ -118,7 +170,7 @@ public class Enquiry {
     }
     
     public void fillName(String name) {
-        System.out.println(driver.findElement(By.name("fullname")).isDisplayed());
+        driver.findElement(By.name("fullname")).isDisplayed();
         driver.findElement(By.name("fullname")).sendKeys(name);
     }
 
@@ -141,9 +193,7 @@ public class Enquiry {
 
     public void addEnquiry(String name, String email, String number, String msg) {
         navigateToEnquiryPageinUser();
-        System.out.println(driver.getTitle());
         scrollBy();
-        System.out.println(driver.getTitle());
         fillName(name);
         fillEmail(email);
         fillNumber(number);
@@ -151,7 +201,10 @@ public class Enquiry {
         clickSend();
     }
 
-
+    public WebElement getRowElement(String value) {
+        WebElement elm = driver.findElement(By.xpath("//tr[td[contains(text(),'" + value + "')]]"));
+        return elm;
+    }
 
 
 
@@ -163,11 +216,17 @@ public class Enquiry {
         click(manageUnanswered);
     }
     // To view details of data
-    public void clickViewDetailsButton() {
-        int dataSize = getTableData().size();
-        String path = "//*[@id=\"main-content\"]/section/div[2]/div/section/table/tbody/tr[" + dataSize + "]/td[6]/a";
-        WebElement viewDetails=driver.findElement(By.xpath(path));
-        click(viewDetails);
+    public void clickViewDetailsButton(String enquiryNumber) {
+        WebElement row = getRowElement(enquiryNumber);
+        scrollToWebElement(row);
+        WebElement elm = row.findElement(By.tagName("a"));
+        driver.get(elm.getAttribute("href"));
+
+        // scrollBy();
+        // int dataSize = getTableData().size();
+        // String path = "//*[@id=\"main-content\"]/section/div[2]/div/section/table/tbody/tr[" + dataSize + "]/td[6]/a";
+        // WebElement viewDetails=driver.findElement(By.xpath(path));
+        // click(viewDetails);
     }
 
     public void fillRemarks(String remark) {
@@ -177,7 +236,7 @@ public class Enquiry {
     public void clickUpdateButton() {
         WebElement update=driver.findElement(By.xpath("/html/body/section/section/section/div[2]/div/section/table/tbody/tr[7]/td/button"));
         click(update);
-    }
+    } 
     
     public String getRemarkDate() {
         return driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table/tbody/tr[7]/td")).getText();
@@ -197,10 +256,9 @@ public class Enquiry {
         }
     }
     // to execute unansweredenquiry
-    public void unansweredEnquiry() {
+    public void unansweredEnquiry(String enquiryNumber) {
         navigateToManageUnansweredEnquiryPage();
-        scrollBy();
-        clickViewDetailsButton();
+        clickViewDetailsButton(enquiryNumber);
         System.out.println("\nUnanswered Enquiry Details \n");
         printEnquiryDetails();
         fillRemarks("Successfully Answered!");
@@ -226,14 +284,9 @@ public class Enquiry {
     }
 
     //To execute answeredEnquiry
-    public void answeredEnquiry() {
+    public void answeredEnquiry(String enquiryNumber) {
         navigateToManageAnsweredEnquiryPage();
-        scrollBy();
-        clickViewDetailsButton();
-    }
-    public void click(WebElement element){
-        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("arguments[0].click();", element);
+        clickViewDetailsButton(enquiryNumber);
     }
 
     public void sendkeys(WebElement element, String value){
@@ -242,12 +295,18 @@ public class Enquiry {
     }
 
     // Search Enquiry
-    public String fetchSearchData() {
+    public String fetchSearchData(String enquiryNumber) {
         navigateToManageAnsweredEnquiryPage();
-        int dataSize = getTableData().size();
-        scrollBy();
-        String searchData = driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table/tbody/tr[" + dataSize + " ]")).getText();
-        return searchData;
+        if(enquiryNumber.length()>0){
+            WebElement row = getRowElement(enquiryNumber);
+            scrollToWebElement(row);
+            return row.getText();
+        }
+        else{
+            int dataSize = getTableData().size();
+            scrollBy();
+            return driver.findElement(By.xpath("//*[@id='main-content']/section/div[2]/div/section/table/tbody/tr[" + dataSize + " ]")).getText();
+        }
     }
 
     public void navigateEnquirySearchPage() {

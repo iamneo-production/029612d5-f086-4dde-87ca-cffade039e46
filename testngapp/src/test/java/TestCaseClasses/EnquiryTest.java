@@ -1,5 +1,4 @@
 
-
 package TestCaseClasses;
 
 import org.testng.annotations.Test;
@@ -13,7 +12,7 @@ import ObjectClasses.SetupDriver;
 
 public class EnquiryTest extends SetupDriver{
 
-    String enquiryNumber;
+    public static String enquiryNumber;
 
     @Test(priority = 0)
     public void addEnquiryTest() {
@@ -35,7 +34,7 @@ public class EnquiryTest extends SetupDriver{
     @Test(priority = 1)
     public void unansweredEnquiryTest() {
         Enquiry enquiry = new Enquiry(driver);
-        enquiry.unansweredEnquiry();
+        enquiry.unansweredEnquiry(enquiryNumber);
 
         Alert alert = driver.switchTo().alert();
         alert.accept(); 
@@ -46,7 +45,7 @@ public class EnquiryTest extends SetupDriver{
     @Test(priority = 2)
     public void answeredEnquiryTest() {
         Enquiry enquiry = new Enquiry(driver);
-        enquiry.answeredEnquiry();
+        enquiry.answeredEnquiry(enquiryNumber);
 
         System.out.println("\nAnswered Enquiry Details \n");
         enquiry.printEnquiryDetails();

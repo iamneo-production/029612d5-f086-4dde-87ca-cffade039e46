@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Art Gallery Testing">
+   <test name="Admin: Login">
+        <classes>
+            <class name="TestCaseClasses.LoginTest" />
+        </classes>
+    </test>
 
     <test name="Admin: Enquiry ">
         <classes>
@@ -14,5 +19,11 @@
             <class name="TestCaseClasses.EnquirySearchTest" />
         </classes>
     </test>  
+
+    <test name="Admin: Logout">
+        <classes>
+            <class name="TestCaseClasses.LogoutTest" />
+        </classes>
+    </test>
 
 </suite>

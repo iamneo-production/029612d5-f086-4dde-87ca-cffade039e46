@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-28T09:26:32 UTC" name="Art Gallery Testing" finished-at="2023-07-28T09:29:03 UTC" duration-ms="150658">
+    <groups>
+    </groups>
+    <test started-at="2023-07-28T09:26:32 UTC" name="Admin: Login" finished-at="2023-07-28T09:26:39 UTC" duration-ms="6504">
+      <class name="TestCaseClasses.LoginTest">
+        <test-method signature="AdminLoginWithInValidDetails()[pri:0, instance:TestCaseClasses.LoginTest@5c909414]" started-at="2023-07-28T09:26:32 UTC" name="AdminLoginWithInValidDetails" finished-at="2023-07-28T09:26:35 UTC" duration-ms="2662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminLoginWithInValidDetails -->
+        <test-method signature="AdminLoginWithValidDetails()[pri:1, instance:TestCaseClasses.LoginTest@5c909414]" started-at="2023-07-28T09:26:35 UTC" name="AdminLoginWithValidDetails" finished-at="2023-07-28T09:26:39 UTC" duration-ms="3793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminLoginWithValidDetails -->
+      </class> <!-- TestCaseClasses.LoginTest -->
+    </test> <!-- Admin: Login -->
+    <test started-at="2023-07-28T09:26:39 UTC" name="Admin: Enquiry " finished-at="2023-07-28T09:27:08 UTC" duration-ms="28739">
+      <class name="TestCaseClasses.EnquiryTest">
+        <test-method signature="addEnquiryTest()[pri:0, instance:TestCaseClasses.EnquiryTest@7a69b07]" started-at="2023-07-28T09:26:39 UTC" name="addEnquiryTest" finished-at="2023-07-28T09:26:46 UTC" duration-ms="6628" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEnquiryTest -->
+        <test-method signature="unansweredEnquiryTest()[pri:1, instance:TestCaseClasses.EnquiryTest@7a69b07]" started-at="2023-07-28T09:26:46 UTC" name="unansweredEnquiryTest" finished-at="2023-07-28T09:27:01 UTC" duration-ms="15917" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unansweredEnquiryTest -->
+        <test-method signature="answeredEnquiryTest()[pri:2, instance:TestCaseClasses.EnquiryTest@7a69b07]" started-at="2023-07-28T09:27:01 UTC" name="answeredEnquiryTest" finished-at="2023-07-28T09:27:08 UTC" duration-ms="6188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- answeredEnquiryTest -->
+      </class> <!-- TestCaseClasses.EnquiryTest -->
+    </test> <!-- Admin: Enquiry  -->
+    <test started-at="2023-07-28T09:27:08 UTC" name="Admin: Enquiry Search" finished-at="2023-07-28T09:29:00 UTC" duration-ms="111916">
+      <class name="TestCaseClasses.EnquirySearchTest">
+        <test-method is-config="true" signature="fetchData()[pri:0, instance:TestCaseClasses.EnquirySearchTest@27ce24aa]" started-at="2023-07-28T09:27:08 UTC" name="fetchData" finished-at="2023-07-28T09:27:11 UTC" duration-ms="2905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchData -->
+        <test-method signature="enquirySearchByNameTest()[pri:0, instance:TestCaseClasses.EnquirySearchTest@27ce24aa]" started-at="2023-07-28T09:27:11 UTC" name="enquirySearchByNameTest" finished-at="2023-07-28T09:27:49 UTC" duration-ms="38385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enquirySearchByNameTest -->
+        <test-method signature="enquirySearchByEnquiryNumberTest()[pri:1, instance:TestCaseClasses.EnquirySearchTest@27ce24aa]" started-at="2023-07-28T09:27:49 UTC" name="enquirySearchByEnquiryNumberTest" finished-at="2023-07-28T09:28:22 UTC" duration-ms="32686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enquirySearchByEnquiryNumberTest -->
+        <test-method signature="enquirySearchByMobileNumberTest()[pri:2, instance:TestCaseClasses.EnquirySearchTest@27ce24aa]" started-at="2023-07-28T09:28:22 UTC" name="enquirySearchByMobileNumberTest" finished-at="2023-07-28T09:29:00 UTC" duration-ms="37931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enquirySearchByMobileNumberTest -->
+      </class> <!-- TestCaseClasses.EnquirySearchTest -->
+    </test> <!-- Admin: Enquiry Search -->
+    <test started-at="2023-07-28T09:29:00 UTC" name="Admin: Logout" finished-at="2023-07-28T09:29:03 UTC" duration-ms="3434">
+      <class name="TestCaseClasses.LogoutTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCaseClasses.LogoutTest@647e447]" started-at="2023-07-28T09:26:22 UTC" name="setup" finished-at="2023-07-28T09:26:32 UTC" duration-ms="10558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="AdminLogout()[pri:0, instance:TestCaseClasses.LogoutTest@647e447]" started-at="2023-07-28T09:29:00 UTC" name="AdminLogout" finished-at="2023-07-28T09:29:03 UTC" duration-ms="3431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCaseClasses.LogoutTest@647e447]" started-at="2023-07-28T09:29:03 UTC" name="tearDown" finished-at="2023-07-28T09:29:03 UTC" duration-ms="266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCaseClasses.LogoutTest -->
+    </test> <!-- Admin: Logout -->
+  </suite> <!-- Art Gallery Testing -->
+</testng-results>
