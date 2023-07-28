@@ -1,0 +1,285 @@
+<html>
+<head>
+<title>TestNG:  test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>41/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jul 28 09:01:54 UTC 2023</td>
+</tr>
+<tr><td>Total time:</td><td>869 seconds (869825 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>logout admin login user </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCaseClasses.userNavbarTest.home()'><b>home</b><br>Test class: TestCaseClasses.userNavbarTest</td>
+<td></td>
+<td>1</td>
+<td>TestCaseClasses.userNavbarTest@1d9b7cce</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtistTest.deleteArtistTest()'><b>deleteArtistTest</b><br>Test class: TestCaseClasses.ArtistTest</td>
+<td></td>
+<td>15</td>
+<td>TestCaseClasses.ArtistTest@1cbbffcd</td></tr>
+<tr>
+<td title='TestCaseClasses.LoginTest.AdminLoginWithValidDetails()'><b>AdminLoginWithValidDetails</b><br>Test class: TestCaseClasses.LoginTest</td>
+<td></td>
+<td>3</td>
+<td>TestCaseClasses.LoginTest@41e36e46</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtMediumTest.addArtMediumTest()'><b>addArtMediumTest</b><br>Test class: TestCaseClasses.ArtMediumTest</td>
+<td></td>
+<td>14</td>
+<td>TestCaseClasses.ArtMediumTest@123ef382</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtProductTest.updateArtProductTest()'><b>updateArtProductTest</b><br>Test class: TestCaseClasses.ArtProductTest</td>
+<td></td>
+<td>35</td>
+<td>TestCaseClasses.ArtProductTest@dbf57b3</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtMediumTest.updateArtMediumTest()'><b>updateArtMediumTest</b><br>Test class: TestCaseClasses.ArtMediumTest</td>
+<td></td>
+<td>20</td>
+<td>TestCaseClasses.ArtMediumTest@123ef382</td></tr>
+<tr>
+<td title='TestCaseClasses.PagesTest.pagesMenuTestcontactus()'><b>pagesMenuTestcontactus</b><br>Test class: TestCaseClasses.PagesTest</td>
+<td></td>
+<td>0</td>
+<td>TestCaseClasses.PagesTest@441772e</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtTypeTest.addArtTypeTest()'><b>addArtTypeTest</b><br>Test class: TestCaseClasses.ArtTypeTest</td>
+<td></td>
+<td>13</td>
+<td>TestCaseClasses.ArtTypeTest@f5ac9e4</td></tr>
+<tr>
+<td title='TestCaseClasses.userNavbarTest.admin()'><b>admin</b><br>Test class: TestCaseClasses.userNavbarTest</td>
+<td></td>
+<td>1</td>
+<td>TestCaseClasses.userNavbarTest@1d9b7cce</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtistTest.updateArtistTest()'><b>updateArtistTest</b><br>Test class: TestCaseClasses.ArtistTest</td>
+<td></td>
+<td>23</td>
+<td>TestCaseClasses.ArtistTest@1cbbffcd</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtProductTest.addArtProductTest()'><b>addArtProductTest</b><br>Test class: TestCaseClasses.ArtProductTest</td>
+<td></td>
+<td>22</td>
+<td>TestCaseClasses.ArtProductTest@dbf57b3</td></tr>
+<tr>
+<td title='TestCaseClasses.DashboardDetailsTest.UnansweredEnquiryDetails()'><b>UnansweredEnquiryDetails</b><br>Test class: TestCaseClasses.DashboardDetailsTest</td>
+<td></td>
+<td>44</td>
+<td>TestCaseClasses.DashboardDetailsTest@31c88ec8</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtProductTest.deleteArtProductTest()'><b>deleteArtProductTest</b><br>Test class: TestCaseClasses.ArtProductTest</td>
+<td></td>
+<td>15</td>
+<td>TestCaseClasses.ArtProductTest@dbf57b3</td></tr>
+<tr>
+<td title='TestCaseClasses.DashboardDetailsTest.artistDetails()'><b>artistDetails</b><br>Test class: TestCaseClasses.DashboardDetailsTest</td>
+<td></td>
+<td>15</td>
+<td>TestCaseClasses.DashboardDetailsTest@31c88ec8</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtTypeTest.deleteArtTypeTest()'><b>deleteArtTypeTest</b><br>Test class: TestCaseClasses.ArtTypeTest</td>
+<td></td>
+<td>15</td>
+<td>TestCaseClasses.ArtTypeTest@f5ac9e4</td></tr>
+<tr>
+<td title='TestCaseClasses.userEnquiryTest.enquiry()'><b>enquiry</b><br>Test class: TestCaseClasses.userEnquiryTest</td>
+<td></td>
+<td>94</td>
+<td>TestCaseClasses.userEnquiryTest@42e99e4a</td></tr>
+<tr>
+<td title='TestCaseClasses.DashboardDetailsTest.artTypeDetails()'><b>artTypeDetails</b><br>Test class: TestCaseClasses.DashboardDetailsTest</td>
+<td></td>
+<td>13</td>
+<td>TestCaseClasses.DashboardDetailsTest@31c88ec8</td></tr>
+<tr>
+<td title='TestCaseClasses.userViewDetailsTest.search()'><b>search</b><br>Test class: TestCaseClasses.userViewDetailsTest</td>
+<td></td>
+<td>101</td>
+<td>TestCaseClasses.userViewDetailsTest@52e6fdee</td></tr>
+<tr>
+<td title='TestCaseClasses.LoginTest.AdminLoginWithInValidDetails()'><b>AdminLoginWithInValidDetails</b><br>Test class: TestCaseClasses.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>TestCaseClasses.LoginTest@41e36e46</td></tr>
+<tr>
+<td title='TestCaseClasses.DashboardDetailsTest.artProductDetails()'><b>artProductDetails</b><br>Test class: TestCaseClasses.DashboardDetailsTest</td>
+<td></td>
+<td>14</td>
+<td>TestCaseClasses.DashboardDetailsTest@31c88ec8</td></tr>
+<tr>
+<td title='TestCaseClasses.PagesTest.pagesMenuTestaboutus()'><b>pagesMenuTestaboutus</b><br>Test class: TestCaseClasses.PagesTest</td>
+<td></td>
+<td>0</td>
+<td>TestCaseClasses.PagesTest@441772e</td></tr>
+<tr>
+<td title='TestCaseClasses.userLinksTest.linkcheck()'><b>linkcheck</b><br>Test class: TestCaseClasses.userLinksTest</td>
+<td></td>
+<td>11</td>
+<td>TestCaseClasses.userLinksTest@14dd9eb7</td></tr>
+<tr>
+<td title='TestCaseClasses.LogoutTest.AdminLogout()'><b>AdminLogout</b><br>Test class: TestCaseClasses.LogoutTest</td>
+<td></td>
+<td>3</td>
+<td>TestCaseClasses.LogoutTest@7334aada</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtMediumTest.deleteArtMediumTest()'><b>deleteArtMediumTest</b><br>Test class: TestCaseClasses.ArtMediumTest</td>
+<td></td>
+<td>15</td>
+<td>TestCaseClasses.ArtMediumTest@123ef382</td></tr>
+<tr>
+<td title='TestCaseClasses.EnquiryTest.unansweredEnquiryTest()'><b>unansweredEnquiryTest</b><br>Test class: TestCaseClasses.EnquiryTest</td>
+<td></td>
+<td>15</td>
+<td>TestCaseClasses.EnquiryTest@384ad17b</td></tr>
+<tr>
+<td title='TestCaseClasses.EnquirySearchTest.enquirySearchByEnquiryNumberTest()'><b>enquirySearchByEnquiryNumberTest</b><br>Test class: TestCaseClasses.EnquirySearchTest</td>
+<td></td>
+<td>31</td>
+<td>TestCaseClasses.EnquirySearchTest@61862a7f</td></tr>
+<tr>
+<td title='TestCaseClasses.userDropdownTest.dropdown()'><b>dropdown</b><br>Test class: TestCaseClasses.userDropdownTest</td>
+<td></td>
+<td>6</td>
+<td>TestCaseClasses.userDropdownTest@4d9e68d0</td></tr>
+<tr>
+<td title='TestCaseClasses.EnquirySearchTest.enquirySearchByMobileNumberTest()'><b>enquirySearchByMobileNumberTest</b><br>Test class: TestCaseClasses.EnquirySearchTest</td>
+<td></td>
+<td>51</td>
+<td>TestCaseClasses.EnquirySearchTest@61862a7f</td></tr>
+<tr>
+<td title='TestCaseClasses.userNavbarTest.contactus()'><b>contactus</b><br>Test class: TestCaseClasses.userNavbarTest</td>
+<td></td>
+<td>0</td>
+<td>TestCaseClasses.userNavbarTest@1d9b7cce</td></tr>
+<tr>
+<td title='TestCaseClasses.userSearchTest.search()'><b>search</b><br>Test class: TestCaseClasses.userSearchTest</td>
+<td></td>
+<td>1</td>
+<td>TestCaseClasses.userSearchTest@6c80d78a</td></tr>
+<tr>
+<td title='TestCaseClasses.userNavbarTest.arttype()'><b>arttype</b><br>Test class: TestCaseClasses.userNavbarTest</td>
+<td></td>
+<td>0</td>
+<td>TestCaseClasses.userNavbarTest@1d9b7cce</td></tr>
+<tr>
+<td title='TestCaseClasses.DashboardDetailsTest.AnsweredEnquiryDetails()'><b>AnsweredEnquiryDetails</b><br>Test class: TestCaseClasses.DashboardDetailsTest</td>
+<td></td>
+<td>106</td>
+<td>TestCaseClasses.DashboardDetailsTest@31c88ec8</td></tr>
+<tr>
+<td title='TestCaseClasses.EnquiryTest.answeredEnquiryTest()'><b>answeredEnquiryTest</b><br>Test class: TestCaseClasses.EnquiryTest</td>
+<td></td>
+<td>11</td>
+<td>TestCaseClasses.EnquiryTest@384ad17b</td></tr>
+<tr>
+<td title='TestCaseClasses.userNavbarTest.about()'><b>about</b><br>Test class: TestCaseClasses.userNavbarTest</td>
+<td></td>
+<td>0</td>
+<td>TestCaseClasses.userNavbarTest@1d9b7cce</td></tr>
+<tr>
+<td title='TestCaseClasses.EnquirySearchTest.enquirySearchByNameTest()'><b>enquirySearchByNameTest</b><br>Test class: TestCaseClasses.EnquirySearchTest</td>
+<td></td>
+<td>52</td>
+<td>TestCaseClasses.EnquirySearchTest@61862a7f</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtTypeTest.updateArtTypeTest()'><b>updateArtTypeTest</b><br>Test class: TestCaseClasses.ArtTypeTest</td>
+<td></td>
+<td>18</td>
+<td>TestCaseClasses.ArtTypeTest@f5ac9e4</td></tr>
+<tr>
+<td title='TestCaseClasses.EnquiryTest.addEnquiryTest()'><b>addEnquiryTest</b><br>Test class: TestCaseClasses.EnquiryTest</td>
+<td></td>
+<td>5</td>
+<td>TestCaseClasses.EnquiryTest@384ad17b</td></tr>
+<tr>
+<td title='TestCaseClasses.PagesTest.updateContactUsPageTestContactUs()'><b>updateContactUsPageTestContactUs</b><br>Test class: TestCaseClasses.PagesTest</td>
+<td></td>
+<td>8</td>
+<td>TestCaseClasses.PagesTest@441772e</td></tr>
+<tr>
+<td title='TestCaseClasses.DashboardDetailsTest.artMediumDetails()'><b>artMediumDetails</b><br>Test class: TestCaseClasses.DashboardDetailsTest</td>
+<td></td>
+<td>15</td>
+<td>TestCaseClasses.DashboardDetailsTest@31c88ec8</td></tr>
+<tr>
+<td title='TestCaseClasses.PagesTest.updateAboutUsPageTestaboutus()'><b>updateAboutUsPageTestaboutus</b><br>Test class: TestCaseClasses.PagesTest</td>
+<td></td>
+<td>12</td>
+<td>TestCaseClasses.PagesTest@441772e</td></tr>
+<tr>
+<td title='TestCaseClasses.ArtistTest.addArtistTest()'><b>addArtistTest</b><br>Test class: TestCaseClasses.ArtistTest</td>
+<td></td>
+<td>16</td>
+<td>TestCaseClasses.ArtistTest@1cbbffcd</td></tr>
+</table><p>
+</body>
+</html>
